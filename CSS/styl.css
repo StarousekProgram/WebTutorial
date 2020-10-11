@@ -1,0 +1,76 @@
+body {
+    max-width: 80vw; /*akttuální šířka okna prohlížeče*/
+    margin: 0;
+    margin: auto; /*stránka bude uprostřed*/
+    background-color: black;
+    color: blanchedalmond;
+}
+
+nav {
+    background-color: #FFA700;
+}
+
+nav ul {
+    display: flex; /*vytvoření contejneru*/
+    justify-content: space-around; /*zarovnání položek v kontejneru*/
+    flex-wrap: wrap; /*zalomování položek*/
+    list-style-type: none; /*odstranění puntíku*/
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    flex-grow: 5; /*počet položek v kontejneru*/
+    flex-basis: 20%; /*šířka položek v kontejneru*/
+    display: flex;
+}
+
+nav ul li a {
+    flex-basis: 100%; /*stejná velikost jak li*/
+    text-decoration: none; /*odstraní podškrtnutí odkazu*/
+    margin: 1rem; 
+    border-radius: 2rem;
+    padding: 1rem; 
+    text-align: center;
+	font-size: 1.5rem;
+    color: white;
+	background-color: blue;
+}
+
+nav a:hover {
+    background-color: #111;
+}
+  
+nav a:active {
+    color: red;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    color: crimson;
+}
+
+img {
+    max-width: 600px;
+    margin: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid white;
+    height: 50px;
+}
+
+td {
+    padding-left: 15px;
+}
+
+tr:nth-child(even) {background-color: rgb(90, 0, 0)}
+tr:hover {background-color: blue;}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="cz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/CSS/styl.css">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/index.html">Domu</a>
+                </li>
+                <li>
+                    <a href="/HTML5.html">HTML5</a>
+                </li>
+                <li>
+                    <a href="/Javascript.html">Javascript</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Javascript (JS)</h1>
+
+    <h2>Zkratky na klávesnici</h2>
+    <img src="./IMG/ZnakyNaKlavesici.jpg">
+
+    <h2>Komentáře</h2>
+    <ul>
+        <li>// komentář - komentář na jeden řádek</li>
+        <li>/* komentář */ - komentář na více řádků</li>
+    </ul>
+
+    <h2>Vložení JS do HTML stránky</h2>
+    <p>
+        &lt;script&gt; JS kód &lt;script/&gt;
+    </p>
+
+    <h2>Proměnné</h2>
+    <p>JS je dynamicky typovaný jazyk (dynamicky mění typy proměnných podle jejich obsahu)</p>
+    <ul>
+        <li>let</li>
+        <li>var - globální proměnná (nepouživat)</li>
+        <li>const - nelze měnit hodnotu</li>
+    </ul>
+
+    <h2>Datum a čas</h2>
+    <script>
+        let d = new Date(); // vytvoří proměnnou, ve které je aktuální datum
+        document.write("Dnes je: " + d.getDate() + ". " + (d.getMonth() + 1) + ". " + d.getFullYear());
+        document.write("<br />");
+        document.write("Čas je: " + d.getHours() + ":" + (d.getMinutes()));
+    </script>
+
+</body>
+
+</html>
