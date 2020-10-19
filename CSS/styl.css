@@ -6,6 +6,35 @@ body {
     color: blanchedalmond;
 }
 
+h1 {
+    text-align: center;
+    color: crimson;
+}
+
+h2{
+    color: yellow;
+}
+
+img {
+    max-width: 600px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none; /*odstraní podškrtnutí odkazu*/
+    color: white;
+    background-color: blue;
+    margin: 1rem; 
+    border-radius: 2rem;
+    padding: 0.5rem; 
+}
+a:hover {
+    color: crimson;
+}
+
+pre {
+    background-color: rgb(68, 68, 68);
+}
 nav {
     background-color: #FFA700;
 }
@@ -43,19 +72,6 @@ nav a:hover {
   
 nav a:active {
     color: red;
-}
-
-h1 {
-    text-align: center;
-}
-
-h2 {
-    color: crimson;
-}
-
-img {
-    max-width: 600px;
-    margin: auto;
 }
 
 table {
