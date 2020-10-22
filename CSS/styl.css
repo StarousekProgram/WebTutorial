@@ -1,3 +1,16 @@
+/*Barvy*/
+.Blue {
+    color: blue;
+}
+
+.LightBlue {
+    color: rgb(100, 100, 255);
+}
+
+.Green {
+    color: green;
+}
+
 body {
     max-width: 80vw; /*akttuální šířka okna prohlížeče*/
     margin: 0;
@@ -35,6 +48,7 @@ a:hover {
 pre {
     background-color: rgb(68, 68, 68);
 }
+
 nav {
     background-color: #FFA700;
 }
