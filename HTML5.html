@@ -32,11 +32,12 @@
     <article>
       <h1>HTML</h1>
       <p>Hyper Text Mark Up Language = odkazovací a <mark>značkovací jazyk</mark> pro vytváření webových stránek</p>
+      <h2>Dokumentace k HTML 5.2</h2>
+      <a href="https://www.w3.org/TR/html52/">Dokumentace k HTML 5.2</a>
       <h2>Dějny internetu</h2>
       <a href="https://cs.wikipedia.org/wiki/D%C4%9Bjiny_internetu">Dějny internetu wikipedia</a>
       <h2>Kontrola validace</h2>
       <a href="https://validator.w3.org/nu/#textarea">validace na validator.w3.org</a>
-
     </article>
     <!-- Vzor HTML stránky -->
     <article>
@@ -81,15 +82,19 @@
     </code>
    </pre>
     </article>
-    <!-- seznam tagů -->
+    <!-- Info Elementy (Tagy) -->
     <article>
-      <h2>Tagy</h2>
-      <p>&lt;tag&gt; - nepárový tag</p>
-      <p>&lt;tag&gt;&lt;/tag&gt; - párový tag</p>
-      <p>&lt;tag atributy&gt; - Atribut je doplňující informace k tagu.</p>
+      <h2>Elementy (Tagy)</h2>
+      <p>&lt;tag&gt; - Prázdný element</p>
+      <p>&lt;tag&gt;&lt;/tag&gt; - Element HTML</p>
+      <p>&lt;tag atribut = "hodnota"&gt; - Atribut je doplňující informace k tagu.</p>
       <h2>HTML element</h2>
       <p>Element HTML je definován počátečním tagem, nějakým obsahem a koncovým tagem</p>
-      <h2>Seznam tagů</h2>
+      <p>Element HTML lze vnořit (to znamená, že prvky mohou obsahovat další prvky).</p>
+    </article>
+    <!-- Zákaldní Elementy -->
+    <article>
+      <h2>Zákaldní Elementy</h2>
       <table>
         <thead>
           <tr>
@@ -101,7 +106,7 @@
         <tbody>
           <tr>
             <td>&lt;!DOCTYPE html&gt;</td>
-            <td>Definujeme typ dokumentu na HTML5</td>
+            <td>Definujeme že tenhle dokumentu je HTML5</td>
             <td></td>
           </tr>
           <tr>
@@ -127,12 +132,14 @@
           </tr>
           <tr>
             <td>&lt;body&gt;&lt;/body&gt;</td>
-            <td>Obsahuje fyzický obsah dokumentu</td>
+            <td>Definuje tělo dokumentu a slouží jako kontejner pro všechny viditelné obsahu, jako jsou nadpisy,
+              odstavce, obrázky, hypertextové odkazy, tabulky, seznamy, atd</td>
             <td></td>
           </tr>
           <tr>
             <td>&lt;h1&gt;&lt;h2&gt; - &lt;h6&gt; Nadpis &lt;/h1&gt;&lt;/h2&gt; - &lt;/h6&gt;</td>
-            <td>až 6 nadpisů</td>
+            <td>Headings = Nadpis, &lt;h1&gt;definuje nejdůležitější nadpis, &lt;h6&gt;definuje nejméně důležitý nadpis.
+            </td>
             <td></td>
           </tr>
           <tr>
@@ -141,18 +148,88 @@
             <td></td>
           </tr>
           <tr>
-            <td>&lt;em&gt;<em> text </em>&lt;/em&gt;</td>
-            <td>emphasis = zvýraznění textu (důležitý text)</td>
+            <td>&lt;pre&gt; text &lt;/pre&gt;</td>
+            <td>Text je zobrazen s pevnou šířkou, zachovává mezery a konce řádků.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>&lt;hr&gt;</td>
+            <td>Horizontal Rules = Horizontální čára</td>
+            <td></td>
+          </tr>
+          <td>&lt;br&gt;</td>
+          <td>Line Breaks = zalomení řádku</td>
+          <td></td>
+          <tr>
+        </tbody>
+      </table>
+    </article>
+    <!-- Elementy na formátování HTML -->
+    <article>
+      <h2>Elementy na formátování HTML</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tag</th>
+            <th>Popis</th>
+            <th>Atribut</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>&lt;b&gt;<b> text </b>&lt;/b&gt;</td>
+            <td>Tučné zvýraznění textu (není důležitý text)</td>
             <td></td>
           </tr>
           <tr>
             <td>&lt;strong&gt;<strong> text </strong>&lt;/strong&gt;</td>
-            <td>strong emphasis = silné zvýraznění textu (důležitý text)</td>
+            <td>Strong emphasis = Tučné zvýraznění textu (důležitý text)</td>
             <td></td>
           </tr>
           <tr>
+            <td>&lt;i&gt;<i> text </i>&lt;/i&gt;</td>
+            <td>Italic = Kurzíva (technický termín, fráze z jiného jazyka, myšlení, jméno lodi, atd)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>&lt;em&gt;<em> text </em>&lt;/em&gt;</td>
+            <td>Emphasis = Zvýraznění textu (Program pro čtení z obrazovky vysloví slova s důrazem, přičemž použije slovní přízvuk.)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>&lt;small&gt;<small> text </small>&lt;/small&gt;</td>
+            <td>Smaller = Menší text</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>&lt;mark&gt;<mark> text </mark>&lt;/mark&gt;</td>
+            <td>Mark = Označéní nebo zvýraznění textu</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>&lt;del&gt;<del> text </del>&lt;/del&gt;</td>
+            <td>Delete = Text který byl z dokumentu odstraněn.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>&lt;ins&gt;<ins> text </ins>&lt;/ins&gt;</td>
+            <td>Insert = Text který byl vložen do dokumentu.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>&lt;sub&gt;<sub> text </sub>&lt;/sub&gt;</td>
+            <td>Subscript = Dolní index (H<sub> 2 </sub>O)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>&lt;sup&gt;<sup> text </sup>&lt;/sup&gt;</td>
+            <td>Superscript = Horní index (a<sup> 2 </sup>)</td>
+            <td></td>
+          </tr>
+
+          <tr>
             <td>&lt;u&gt;<u> text </u>&lt;/u&gt;</td>
-            <td>podtržení textu</td>
+            <td></td>
             <td></td>
           </tr>
           <tr>
@@ -160,27 +237,26 @@
             <td>strike = přeškrtnutý textu</td>
             <td></td>
           </tr>
-          <tr>
-            <td>&lt;mark&gt;<mark> text </mark>&lt;/mark&gt;</td>
-            <td>optickému zvýraznění textu</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;img src="" alt=""&gt;</td>
-            <td>image = obrázek</td>
-            <td>src, alt - název obrázku (Google Images)</td>
-          </tr>
-          <tr>
-            <td>&lt;a&gt; href=""<a href="">odkaz</a>&lt;/a&gt;</td>
-            <td>anchor = zakotvit, připoutat</td>
-            <td>href</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
+
+    </article>
+
+
+    <td>&lt;a&gt; href="Cíl odkazu"<a href="">odkaz</a>&lt;/a&gt;</td>
+    <td>anchor = zakotvit, připoutat</td>
+    <td></td>
+    </tr>
+    <tr>
+      <td>&lt;img src="Zdrojový soubor" alt="alternativní text"&gt;</td>
+      <td>image = obrázek</td>
+      <td>width, height</td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+    </tbody>
+    </table>
     </article>
     <!-- Tabulka -->
     <article>
