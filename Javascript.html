@@ -27,40 +27,41 @@
       </ul>
     </nav>
   </header>
-  <h1>Javascript (JS)</h1>
-  <!-- Komentář -->
-  <article>
-    <h2>Komentáře</h2>
-    <pre>
+  <section>
+    <h1>Javascript (JS)</h1>
+    <!-- Komentář -->
+    <article>
+      <h2>Komentáře</h2>
+      <pre>
       <code>
       // komentář na jeden řádek
       /* komentář na více řádků */
       </code>
     </pre>
-  </article>
-  <!-- Vložení JS do HTML stránky -->
-  <article>
-    <h2>Vložení JS do HTML stránky</h2>
-    <pre>
+    </article>
+    <!-- Vložení JS do HTML stránky -->
+    <article>
+      <h2>Vložení JS do HTML stránky</h2>
+      <pre>
       <code>
       &lt;script type="text/javascript"&gt; JS kód &lt;script/&gt;
       </code>
     </pre>
-  </article>
-  <!-- Proměnné -->
-  <article>
-    <h2>Proměnné</h2>
-    <p>JS je dynamicky typovaný jazyk (dynamicky mění typy proměnných podle jejich obsahu)</p>
-    <ul>
-      <li>let</li>
-      <li>var - globální proměnná (nepouživat)</li>
-      <li>const - nelze měnit hodnotu</li>
-    </ul>
-  </article>
-  <!-- Datum a čas -->
-  <article>
-    <h2>Datum a čas</h2>
-    <pre>
+    </article>
+    <!-- Proměnné -->
+    <article>
+      <h2>Proměnné</h2>
+      <p>JS je dynamicky typovaný jazyk (dynamicky mění typy proměnných podle jejich obsahu)</p>
+      <ul>
+        <li>let</li>
+        <li>var - globální proměnná (nepouživat)</li>
+        <li>const - nelze měnit hodnotu</li>
+      </ul>
+    </article>
+    <!-- Datum a čas -->
+    <article>
+      <h2>Datum a čas</h2>
+      <pre>
       <code>
         &lt;script type="text/javascript"&gt;
           let d = new Date(); // vytvoří proměnnou, ve které je aktuální datum
@@ -70,17 +71,15 @@
         &lt;/script&gt;
       </code>
     </pre>
-    
-    <h3>Výsledek</h3>
-    <script type="text/javascript">
-      let d = new Date(); // vytvoří proměnnou, ve které je aktuální datum
-      document.write("Dnes je: " + d.getDate() + ". " + (d.getMonth() + 1) + ". " + d.getFullYear());
-      document.write("<br />");
-      document.write("Čas je: " + d.getHours() + ":" + (d.getMinutes())); 
-    </script>  
-  </article>    
 
-
+      <h3>Výsledek</h3>
+      <script type="text/javascript">
+        let d = new Date(); // vytvoří proměnnou, ve které je aktuální datum
+        document.write("Dnes je: " + d.getDate() + ". " + (d.getMonth() + 1) + ". " + d.getFullYear());
+        document.write("<br />");
+        document.write("Čas je: " + d.getHours() + ":" + (d.getMinutes())); 
+      </script>
+    </article>
+  </section>
 </body>
-
 </html>

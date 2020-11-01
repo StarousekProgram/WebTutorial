@@ -28,6 +28,10 @@ h2{
     color: yellow;
 }
 
+.poznamka{
+    background-color: burlywood;
+}
+
 img {
     max-width: 600px;
     margin: auto;
