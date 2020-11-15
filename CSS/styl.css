@@ -1,16 +1,3 @@
-/*Barvy*/
-.Blue {
-    color: blue;
-}
-
-.LightBlue {
-    color: rgb(100, 100, 255);
-}
-
-.Green {
-    color: green;
-}
-
 body {
     max-width: 80vw; /*akttuální šířka okna prohlížeče*/
     margin: 0;
@@ -24,8 +11,12 @@ h1 {
     color: crimson;
 }
 
-h2{
+h2 {
     color: yellow;
+}
+
+h3 {
+    color: seagreen;
 }
 
 .poznamka{
@@ -108,3 +99,7 @@ td {
 
 tr:nth-child(even) {background-color: rgb(90, 0, 0)}
 tr:hover {background-color: blue;}
+
+strong {
+    color: red;
+}
