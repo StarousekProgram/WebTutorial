@@ -24,6 +24,9 @@
         <li>
           <a href="/Javascript.html">Javascript</a>
         </li>
+        <li>
+          <a href="/KalkulackaJS.html">Kalkulačka v JS</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -50,7 +53,7 @@
       <h2>Vložení JS do HTML stránky</h2>
       <pre>
         <code>
-      &lt;script type="text/javascript"&gt; JS kód &lt;/script&gt;
+      &lt;script&gt; JS kód &lt;/script&gt;
       &lt;script src="cesta k souboru.js"&gt;&lt;/script&gt; //píše se mezi &lt;head&gt;&lt;/head&gt;
         </code>
       </pre>
@@ -92,7 +95,7 @@
     <!-- Proměnné -->
     <article>
       <h2>Proměnné, Konstanta</h2>
-      <p>JS je dynamicky typovaný jazyk (dynamicky mění typy proměnných podle jejich obsahu)</p>
+      <p>JS je dynamicky typovaný jazyk (dynamicky mění typy proměnných podle jejich obsahu).</p>
       <h3>Deklarace (vytváření) proměnných</h3>
       <p>Znak rovná se (<strong>=</strong>) je operátorem <strong>„přiřazení“</strong>, nikoli operátorem <strong>„rovná se“</strong>.</p>
       <pre>
@@ -110,6 +113,7 @@
         <li>Nelze použít rezervovaná slova JS.</li>
         <li>Rozlišuje se velká a malá písmena.</li>
       </ul>
+      <h3>Datové typy</h3>
       <table>
         <thead>
           <tr>
@@ -119,33 +123,34 @@
         </thead>
         <tbody>
           <tr>
+            <td><code>let identifikatorPromenne;</code></td>
+            <td>Undefined</td>
+          </tr>    
+          <tr>
+            <td>null;</td>
+            <td>Null - objekt</td>
+          </tr>
+          <tr>
             <td>"text"; 'text';</td>
             <td>String = Textový řetězec</td>
           </tr>
           <tr>
-            <td>15;</td>
-            <td>Int = Celé číslo</td>
+            <td>15; 3.14;</td>
+            <td>Number (Int = Celé číslo + Double, Float = Desetiné číslo)</td>
           </tr>
           <tr>
-            <td>3.14;</td>
-            <td>Double, Float = Desetiné číslo</td>
+            <td>["martin", "Pavel", "Ríša"];</td>
+            <td>Pole</td>
           </tr>
           <tr>
-            <td></td>
+            <td>{Jméno:"Martin", Příjmení:"Starý", Věk:32, povolání:"Eletrikář"};</td>
             <td>Objekt</td>
           </tr>
           <tr>
             <td></td>
             <td>Boolen (true, false) – pravda/nepravda</td>
           </tr>
-          <tr>
-            <td></td>
-            <td>Null - objekt</td>
-          </tr>
-          <tr>
-            <td><code>let identifikatorPromenne;</code></td>
-            <td>Undefined – není objekt</td>
-          </tr>
+
         </tbody>
       </table>
     </article>
@@ -743,6 +748,28 @@
       document.write(promnenna); // Ahoj, vřele tě tu vítám Karle!    
         </code>
       </pre>
+    </article>
+    <!-- Třídy -->
+    <article>
+      <h2>Třídy (Class)</h2>
+      <p>Třídy JavaScript jsou šablony pro objekty JavaScript.</p>
+      <h3>Syntax</h3>
+      <pre>
+        <code>
+          class Car {
+            constructor(name, year) {
+              this.name = name;
+              this.year = year;
+            }
+          }
+        </code>
+      </pre>
+    </article>
+    <!-- OOP test -->
+    <article>
+      <h2>OOP</h2>
+      <script src="/JS/JS0.js"></script>
+      <script src="/JS/JS1.js"></script>
     </article>
   </section>
 </body>
