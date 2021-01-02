@@ -36,60 +36,142 @@
       </ul>
     </nav>
   </header>
-
   <section>
     <!-- CSS info -->
     <article>
       <h1>CSS</h1>
       <dl>
         <dt>CSS (Cascading Style Sheets)</dt>
-        <dd>je jazyk, speciálně vyvinutý pro stylování HTML</dd>
+        <dd>Je jazyk, speciálně vyvinutý pro stylování HTML</dd>
       </dl>
-      <p>Vytvoříme složku CSS a v něm soubor styl.css</p>
-      <p>V HTML souboru napojíme CSS soubor:
-        <br>
-        &lt;head&gt;
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" type="text/css" href="/CSS/styl.css">
-        <br>
-        &lt;/head&gt;</p>
+    </article>
+    <!-- Komentář -->
+    <article>
+      <h2>Komentář</h2>
+
+      <pre>
+        <code>
+      /* Komentář */    
+        </code>
+      </pre>
+    </article>
+    <!-- Jak přidat CSS -->
+    <article>
+      <h2>Jak přidat CSS</h2>
+
+      <h3>Externí CSS</h3>
+      <ol>
+        <li>Vytvoříme složku CSS a v něm soubor styl.css</li>
+        <li>V HTML souboru napojíme CSS soubor:</li>
+      </ol>
+      <pre>
+        <code>
+      &lt;head&gt;
+        &lt;link rel="stylesheet" type="text/css" href="/CSS/styl.css">
+      &lt;/head&gt;
+        </code>
+      </pre>
+
+      <h3>Interní CSS</h3>
+      <p>píšem do hlavičky HTML souboru</p>
+      <pre>
+        <code>
+      &lt;head&gt;
+        &lt;style&gt;
+          kód css
+        &lt;/style&gt;
+      &lt;/head&gt;
+        </code>
+      </pre>
+
+      <h3>Inline CSS</h3>
+      <p>Píšem jako Atribut</p>
+      <pre>
+        <code>
+          &lt;div style="kod css;"&gt;
+
+          &lt;/div&gt;
+        </code>
+      </pre>
+
+      <h3>Priority CSS</h3>
+      <ol>
+        <li>Inline CSS</li>
+        <li>Interní CSS</li>
+        <li>Externí CSS</li>
+      </ol>
     </article>
     <!-- selektorech -->
     <article>
       <h2>Selektory</h2>
       <dl>
         <dt>Selektory (select = označit)</dt>
-        <dd>Selektory umožňují označit prvky na stránce podle určitých kritérií a potom tyto prvky ostylovat.</dd>
+        <dd>Selektory CSS se používají k "vyhledání" (nebo výběru) elementů HTML, které chcete stylovat.</dd>
       </dl>
-      <h2>Typový selektor</h2>
-      <dl>
-        <dt>typový selektor</dt>
-        <dd>Vybere všechny elementy daného typu.(HTML tagy)</dd>
-      </dl>
+      <table>
+        <thead>
+          <tr>
+            <th>Selector</th>
+            <th>HTML Element</th>
+            <th>Popis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#ID</td>
+            <td><code>&lt;div id="ID"&gt;&lt;/div&gt;</code></td>
+            <td>Element jedinečným "ID".</td>
+          </tr>
+          <tr>
+            <td>.class</td>
+            <td><code>&lt;div class="class"&gt;&lt;/div&gt;</code></td>
+            <td>Všechny elementy s "class" (Název class nemůže začínat číslem!).</td>
+          </tr>
+          <tr>
+            <td>element.class</td>
+            <td><code>&lt;div class="class"&gt;&lt;/div&gt;</code></td>
+            <td>Element div s class</td>
+          </tr>
+          <tr>
+            <td>element</td>
+            <td><code>&lt;div&gt;&lt;/div&gt;</code></td>
+            <td>Pro všechny &lt;div&gt; elementy.</td>
+          </tr>
+          <tr>
+            <td>element, element, element</td>
+            <td></td>
+            <td>sekupení Elementů</td>
+          </tr>
+          <tr>
+            <td>*</td>
+            <td></td>
+            <td>Všechny elementy HTML</td>
+          </tr>
+        </tbody>
+      </table>
     </article>
     <!-- Barvy -->
     <article>
       <h2>Barvy (Color)</h2>
-      <h3>Seznam základních barev:</h3>
-      <ol>
-        <li>aqua</li>
-        <li>black</li>
-        <li>blue</li>
-        <li>fuchsia</li>
-        <li>gray</li>
-        <li>green</li>
-        <li>lime</li>
-        <li>maroon</li>
-        <li>navy</li>
-        <li>olive</li>
-        <li>purple</li>
-        <li>red</li>
-        <li>silver</li>
-        <li>teal</li>
-        <li>white</li>
-        <li>yellow</li>
-      </ol>
-      <h3>Zadání barvy pomocí RGB (červená (red), zelená (green) a modrá(blue))</h3>
+
+      <h3>Dle názvu barev:</h3>
+      <a href="https://www.w3schools.com/colors/colors_names.asp">w3schools/colors</a>
+
+      <h3>RGB (červená (red), zelená (green) a modrá (blue))</h3>
+      <p>Každý parametr (červený, zelený a modrý) definuje intenzitu barvy mezi 0 a 255.</p>
+      <p style="background-color: rgb(255, 0, 0);">background-color: rgb(255, 0, 0);</p>
+
+      <h3>RGBA (červená (red), zelená (green), modrá (blue) a alfa)</h3>
+      <p>Alfa parametr je číslo mezi 0,0 (plně transparentní) a 1,0 (vůbec netransparentní):</p>
+      <p style="background-color: rgba(255, 0, 0, 0.3);">background-color: rgba(255, 0, 0, 0.3);</p>
+
+      <h3>HEX - #rrggbb (rr (červená), gg (zelená) a bb(modrá)</h3>
+      <p>Hexadecimální čísla se zapisují pomocí číslic '0', '1', '2', '3', '4', '5', '6', '7', '8' a '9' a písmen 'A',
+        'B', 'C', 'D', 'E' a 'F'</p>
+      <p style="background-color: #ff0000;">background-color: #ff0000;</p>
+      
+      <h3>HSL</h3>
+      <a href="https://www.w3schools.com/css/css_colors_hsl.asp">w3schools</a>
     </article>
   </section>
 </body>
