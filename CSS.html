@@ -44,6 +44,7 @@
         <dt>CSS (Cascading Style Sheets)</dt>
         <dd>Je jazyk, speciálně vyvinutý pro stylování HTML</dd>
       </dl>
+      <p>CSS poprvé implementovala společnost microsoft v roce 1996 do internet Exploreru 3.0.</p>
     </article>
     <!-- Komentář -->
     <article>
@@ -73,7 +74,7 @@
       </pre>
 
       <h3>Interní CSS</h3>
-      <p>píšem do hlavičky HTML souboru</p>
+      <p>Píšem do hlavičky HTML souboru.</p>
       <pre>
         <code>
       &lt;head&gt;
@@ -85,7 +86,7 @@
       </pre>
 
       <h3>Inline CSS</h3>
-      <p>Píšem jako Atribut</p>
+      <p>Píšem jako Atribut.</p>
       <pre>
         <code>
           &lt;div style="kod css;"&gt;
@@ -108,10 +109,18 @@
         <dt>Selektory (select = označit)</dt>
         <dd>Selektory CSS se používají k "vyhledání" (nebo výběru) elementů HTML, které chcete stylovat.</dd>
       </dl>
+      <dl>
+        <dt>Identifikátor (#ID)</dt>
+        <dd>ID má jedinečný název a můžem ho přiřadit jenom jednomu HTML elementu.</dd>
+      </dl>
+      <dl>
+        <dt>Třídy (class)</dt>
+        <dd>Class má jedinečný název a můžem ho přiřadit k více HTML elementů.</dd>
+      </dl>
       <table>
         <thead>
           <tr>
-            <th>Selector</th>
+            <th>Název</th>
             <th>HTML Element</th>
             <th>CSS soubor</th>
             <th>Popis</th>
@@ -157,6 +166,116 @@
         </tbody>
       </table>
     </article>
+    <!-- Jednotky -->
+    <article>
+      <h2>Jednotky</h2>
+
+      <p>Desetinou hodnotu odělujeme <strong>tečkou</strong> (.).</p>
+      <p>V CSS se nepíšou <strong>mezery</strong>.</p>
+      <p>Pokud deklaraci nastavujem více hodnot, platí pořadí <strong>top-right-bottom-left</strong> a jednotlivé hodnoty se oddělují
+      <strong>mezerou</strong> (margin: 50px 150px 111px 333px).</p>
+      <p>Pokud zapíšete jen číslo bez jednotky, prohlížeč ho bude pokládat za pixely.</p> 
+
+      <h3>Absolutní délky</h3>
+
+      <p>Jednotky absolutní délky jsou pevné.</p>
+      <p>Jednotky absolutní délky se nedoporučují používat na obrazovce, protože velikosti obrazovky se tolik liší. Lze
+        je však použít, pokud je známé výstupní médium, například pro rozložení tisku.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Jednotka</th>
+            <th>Názec</th>
+            <th>Převod</th>
+            <th>V px</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>mm</td>
+            <td>milimetery</td>
+            <td></td>
+            <td>1mm = 3.78px</td>
+          </tr>
+          <tr>
+            <td>cm</td>
+            <td>centimetry</td>
+            <td>1cm = 10mm</td>
+            <td>1cm = 37.8px</td>
+          </tr>
+          <tr>
+            <td>in</td>
+            <td>palec (inch)</td>
+            <td>1in = 2,54cm</td>
+            <td>1in = 96px</td>
+          </tr>
+          <tr>
+            <td>px</td>
+            <td>pixels (1px = 1/96th of 1in) - každé zařízený má jinačí počet px</td>
+          </tr>
+          <tr>
+            <td>pt</td>
+            <td>typografický bod (points) (1pt = 1/72 of 1in)</td>
+          </tr>
+          <tr>
+            <td>pc</td>
+            <td>pica (picas) nebo též cicero (1pc = 12 pt)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Relativní délky</h3>
+      <p>Jednotky relativní délky určují délku vzhledem k jiné vlastnosti délky.</p>
+      <p>Jednotky relativní délky se lépe škálují mezi různými vykreslovacími médii.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Jednotka</th>
+            <th>Popis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>em</td>
+            <td>K velikosti písma daného elementu</td>
+          </tr>
+          <tr>
+            <td>ex</td>
+            <td>K výšce aktuálního písma</td>
+          </tr>
+          <tr>
+            <td>ch</td>
+            <td>K šířce „0“ (nula)</td>
+          </tr>
+          <tr>
+            <td>rem</td>
+            <td>K velikosti písma kořenového prvku</td>
+          </tr>
+          <tr>
+            <td>vw</td>
+            <td>K 1% šířky výřezu</td>
+          </tr>
+          <tr>
+            <td>vh</td>
+            <td>K 1% výšky výřezu</td>
+          </tr>
+          <tr>
+            <td>vmin</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>vmax</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>%</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
     <!-- Barvy -->
     <article>
       <h2>Barvy (Color)</h2>
@@ -176,14 +295,14 @@
       <p>Hexadecimální čísla se zapisují pomocí číslic '0', '1', '2', '3', '4', '5', '6', '7', '8' a '9' a písmen 'A',
         'B', 'C', 'D', 'E' a 'F'</p>
       <p style="background-color: #ff0000;">background-color: #ff0000;</p>
-      
+
       <h3>HSL</h3>
       <a href="https://www.w3schools.com/css/css_colors_hsl.asp">w3schools</a>
     </article>
     <!-- CSS declarations -->
     <article>
       <h2>CSS declarations</h2>
-      
+
       <table>
         <thead>
           <tr>
