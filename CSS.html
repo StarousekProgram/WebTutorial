@@ -163,6 +163,31 @@
             <td><code>* { CSS kód }</code></td>
             <td>Všechny elementy HTML</td>
           </tr>
+          <tr>
+            <td>:hover</td>
+            <td><code>&lt;a&gt;&lt;/a&gt;</code>, <code>&lt;div&gt;&lt;/div&gt;</code>,...</td>
+            <td><code>a:hover { CSS kód}, div:hover { CSS kód }</code>,...</td>
+            <td>Po najetí myší na daní element</td>
+          </tr>
+          <tr>
+            <td>:active</td>
+            <td><code>&lt;a&gt;&lt;/a&gt;</code>, <code>&lt;div&gt;&lt;/div&gt;</code>,...</td>
+            <td><code>a:active { CSS kód}, div:active { CSS kód }</code>,...</td>
+            <td>Po zmáčknutí myší na daní element</td>
+          </tr>
+          <tr>
+            <td>:visited</td>
+            <td><code>&lt;a&gt;&lt;/a&gt;</code></td>
+            <td><code>a:visited { CSS kód}</code></td>
+            <td>Po zmáčknutí myší na element a. Povolené styly jsou: color, background-color, border-color, outline
+              color, column-rule-color, the color parts of fill and stroke.</td>
+          </tr>
+          <tr>
+            <td>:link</td>
+            <td><code>&lt;a&gt;&lt;/a&gt;</code></td>
+            <td><code>a:link { CSS kód}</code></td>
+            <td></td>
+          </tr>
         </tbody>
       </table>
     </article>
@@ -172,9 +197,11 @@
 
       <p>Desetinou hodnotu odělujeme <strong>tečkou</strong> (.).</p>
       <p>V CSS se nepíšou <strong>mezery</strong>.</p>
-      <p>Pokud deklaraci nastavujem více hodnot, platí pořadí <strong>top-right-bottom-left</strong> a jednotlivé hodnoty se oddělují
-      <strong>mezerou</strong> (margin: 50px 150px 111px 333px).</p>
-      <p>Pokud zapíšete jen číslo bez jednotky, prohlížeč ho bude pokládat za pixely.</p> 
+      <p>Pokud nastavujem více hodnot, platí pořadí <strong>top-right-bottom-left</strong> a jednotlivé hodnoty se
+        oddělují
+        <strong>mezerou</strong> (margin: 50px 150px 111px 333px).
+      </p>
+      <p>Pokud zapíšete jen číslo bez jednotky, prohlížeč ho bude pokládat za pixely.</p>
 
       <h3>Absolutní délky</h3>
 
@@ -213,14 +240,20 @@
           <tr>
             <td>px</td>
             <td>pixels (1px = 1/96th of 1in) - každé zařízený má jinačí počet px</td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <td>pt</td>
             <td>typografický bod (points) (1pt = 1/72 of 1in)</td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <td>pc</td>
             <td>pica (picas) nebo též cicero (1pc = 12 pt)</td>
+            <td></td>
+            <td></td>
           </tr>
         </tbody>
       </table>
@@ -255,11 +288,11 @@
           </tr>
           <tr>
             <td>vw</td>
-            <td>K 1% šířky výřezu</td>
+            <td>K 1% šířky okna prohlížeče</td>
           </tr>
           <tr>
             <td>vh</td>
-            <td>K 1% výšky výřezu</td>
+            <td>K 1% výšky okna prohlížeče</td>
           </tr>
           <tr>
             <td>vmin</td>
@@ -271,10 +304,94 @@
           </tr>
           <tr>
             <td>%</td>
-            <td></td>
+            <td>Procenta z rodiče elementu.</td>
           </tr>
         </tbody>
       </table>
+    </article>
+    <!-- animace -->
+    <article>
+      <h2>Animace</h2>
+      <ol>
+        <li>nastavení Animace</li>
+        <pre>
+              <code>
+            @keyframes NazevAnimace {
+              from { CSS kód }
+              to   { CSS kód }
+            }
+              </code>
+            </pre>
+        <p>nebo</p>
+        <pre>
+              <code>
+            @keyframes NazevAnimace {
+              0% { CSS kód }
+              1% { CSS kód }
+              2% { CSS kód }
+              3% { CSS kód }
+              4% { CSS kód }
+              .
+              .
+              .
+              100% { CSS kód }
+            }
+              </code>
+            </pre>
+        <li>Zavolání animace</li>
+        <pre>
+              <code>
+            div {
+              animation: NazevAnimace 5s infinite;
+            }    
+              </code>
+            </pre>
+      </ol>
+      <table>
+        <thead>
+          <tr>
+            <th>Nadpis tabulky</th>
+            <th>Nadpis tabulky 2</th>
+            <th>3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>animation-delay: ;</code></td>
+            <td>Zpoždění spuštění animace (s, ms).</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>animation-direction: ;</code></td>
+            <td>Směr animace</td>
+            <td>
+              <ul>
+                <li>normal - Z leva do prava.</li>
+                <li>reverse - Z prava do leva.</li>
+                <li>alternate - Z leva do prava a zpět.</li>
+                <li>alternate-reverse - Z prav do leva a zpět.</li>
+                <li>initial - Nastaví výchozí hodnotu.</li>
+                <li>inherit - Dědí od rodiče elementu.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><code>animation-duration: ;</code></td>
+            <td>Trvání animace (s, ms).</td>
+            <td>
+              <ul>
+                <li>time - čas.</li>
+                <li>initial - Nastaví výchozí hodnotu.</li>
+                <li>inherit - Dědí od rodiče elementu.</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+    <!-- @media -->
+    <article>
+      <h2>@media</h2>
     </article>
     <!-- Barvy -->
     <article>

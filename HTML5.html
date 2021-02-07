@@ -40,9 +40,10 @@
     <!-- HTML info -->
     <article>
       <h1>HTML</h1>
+
       <dl>
         <dt>Hyper Text Mark Up Language</dt>
-        <dd><mark>Značkovací jazyk</mark> který říká webovým prohlížečům, jak strukturovat
+        <dd><strong>Značkovací jazyk</strong> který říká webovým prohlížečům, jak strukturovat
           navštívené webové stránky.</dd>
       </dl>
 
@@ -69,59 +70,269 @@
     </article>
     <!-- Tagy (Značky), Elementy (Prvky) -->
     <article>
-      <h2>Tag (Značka), Element (Prvek)</h2>
+      <h2>Anatomie HTML Elementu (Prvku), Tag (Značka)</h2>
 
       <dl>
-        <dt>&lt;tag&gt;</dt>
-        <dd>Empty (Prázdný) element</dd>
-      </dl>
-
-      <dl>
-        <dt>&lt;tag&gt; Nějaký obsah &lt;/tag&gt;</dt>
+        <dt><code>&lt;tag atribut="hodnota"&gt; Nějaký obsah &lt;/tag&gt;</code></dt>
         <dd>Element HTML je definován počátečním tagem, nějakým obsahem a koncovým tagem.</dd>
-      </dl>
-
-      <dl>
-        <dt>&lt;tag atribut = "hodnota"&gt;</dt>
+        <dd>Tagy v HTML se píšou malýma písmenama.</dd>
         <dd>Atribut je doplňující informace k tagu.</dd>
       </dl>
 
-      <h3>Elementy se dělí na: </h3>
+      <dl>
+        <dt><code>&lt;tag&gt;</code></dt>
+        <dd>Empty (Prázdný) element</dd>
+      </dl>
 
-      <ul>
-        <li>
-          <dl>
-            <dt>Block-level Element</dt>
-            <dd>Začíná na novém řádku a zabírá celou šířku stránky nebo kontejneru. Má zalomení řádku před a za
-              elementem.</dd>
-          </dl>
-        </li>
-        <li>
-          <dl>
-            <dt>Inline Elment</dt>
-            <dd>Lze umístit do jiných Elementů.</dd>
-          </dl>
-        </li>
-      </ul>
+      <h3>Inline Elment (Vnořené prvky)</h3>
 
-      <p class="poznamka">Poznámka: Tagy v HTML nerozlišují velká a malá písmena. To znamená, že mohou být psány velkými
-        nebo malými
-        písmeny. Například &lt;title&gt; může být psán jako &lt;title&gt;, &lt;TITLE&gt;, &lt;Title&gt;, &lt;TiTlE&gt;,
-        atd., A to bude
-        fungovat. Doporučujeme však psát všechny tagy malými písmeny z důvodu konzistence, čitelnosti a
-        dalších důvodů.</p>
+      <dl>
+        <dt><code>&lt;p&gt; Jmenuji se &lt;strong&gt;PikaHeim&lt;/strong&gt;. &lt;/p&gt;</code></dt>
+        <dd>Element strong = inline element.</dd>
+      </dl>
+
+      <h3>Block-level Element (Na úrovni bloku)</h3>
+
+      <dl>
+        <dt>
+        <dt><code>&lt;p&gt; Jmenuji se &lt;strong&gt;PikaHeim&lt;/strong&gt;. &lt;/p&gt;</code></dt>
+        </dt>
+        <dd>Element p = Block-level Element</dd>
+      </dl>
     </article>
-    <!-- Vzor HTML5 -->
+    <!-- Globální atributy -->
     <article>
-      <h2>Vzor HTML5</h2>
+      <h2>Globální atributy</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Atribut</th>
+            <th>Popis</th>
+            <th>Odkaz</th>
+            <th>Kompatibilní</th>
+            <th>Používám</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>accesskey=""</td>
+            <td>Klávesová zkratka.</td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/accesskey">accesskey</a>
+            </td>
+            <td>NE</td>
+            <td>NE</td>
+          </tr>
+          <tr>
+            <td>autocapitalize=""</td>
+            <td>Velká písmena u slov.</td>
+            <td><a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/autocapitalize">autocapitalize</a>
+            </td>
+            <td>NE</td>
+            <td>NE</td>
+          </tr>
+          <tr>
+            <td>class=""</td>
+            <td>Viz CSS a JavaScript.</td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class">class</a></td>
+            <td>ANO</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>contenteditable=""</td>
+            <td>Element se dá editovat (true)/ nelze editovat(false).</td>
+            <td><a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contenteditable">contenteditable</a>
+            </td>
+            <td>ANO</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>contextmenu=""</td>
+            <td>Zastaralý atribut a bude odstraněn ze všech prohlížečů </td>
+            <td><a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/contextmenu">contextmenu</a>
+            </td>
+            <td>NE</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>data-*</td>
+            <td>Skryté data.</td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-*">data-*</a></td>
+            <td>ANO</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>dir</td>
+            <td>Určuje směr textu elementu (ltr = zleva do prava, rtl = zprav do leva a auto = základní algoritmus).
+            </td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/dir">dir</a></td>
+            <td>NE</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>draggable</td>
+            <td>Přetažení</td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/draggable">draggable</a>
+            </td>
+            <td>ANO</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>enterkeyhint</td>
+            <td></td>
+            <td><a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/enterkeyhint">enterkeyhint</a>
+            </td>
+            <td>NE</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>hidden</td>
+            <td>Skryje Element</td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden">hidden</a></td>
+            <td>ANO</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>id</td>
+            <td>Definuje indifikátor, které musí být jedinečný v celém dokumentu.</td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id">ID</a></td>
+            <td>ANO</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>inputmode</td>
+            <td></td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inputmode">inputmode</a>
+            </td>
+            <td>NE</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>is</td>
+            <td></td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/is">is</a></td>
+            <td>NE</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>itemid</td>
+            <td>Jedinečný globální identifikátor položky.</td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemid">itemid</a></td>
+            <td>ANO</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>itemprop</td>
+            <td></td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">itemprop</a></td>
+            <td>ANO</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>itemref</td>
+            <td></td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemref">itemref</a></td>
+            <td>ANO</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>itemscope</td>
+            <td></td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemscope">itemscope</a>
+            </td>
+            <td>ANO</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>itemtype</td>
+            <td></td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemtype">itemtype</a></td>
+            <td>ANO</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>lang</td>
+            <td>Definuje jazyk textu v Elementu.</td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang">lang</a></td>
+            <td>ANO</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>nonce</td>
+            <td></td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/nonce">nonce</a></td>
+            <td>NE</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>part</td>
+            <td></td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/part">part</a></td>
+            <td>NE</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>slot</td>
+            <td></td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/slot">slot</a></td>
+            <td>ANO</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>spellcheck</td>
+            <td>Kontrola pravopisné chyby v textu Elementu.</td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/spellcheck">spellcheck</a>
+            </td>
+            <td>ANO</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>style</td>
+            <td>Viz CSS.</td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/style">style</a></td>
+            <td>ANO</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>tabindex</td>
+            <td></td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex">tabindex</a></td>
+            <td>ANO</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>title</td>
+            <td></td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/title">title</a></td>
+            <td>NE</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>translate</td>
+            <td></td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/translate">translate</a>
+            </td>
+            <td>NE</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+    <!-- Anatomie dokumentu HTML -->
+    <article>
+      <h2>Anatomie dokumentu HTML</h2>
       <p>VSC: &quot;!&quot;</p>
 
       <pre>
         <code>
-      &lt;!DOCTYPEhtml&gt;
+      &lt;!DOCTYPE html&gt; 
       &lt;html lang="cs-cz"&gt;
       &lt;head&gt;
         &lt;meta charset="utf-8" &gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
         &lt;link rel="stylesheet" type="text/css" href="/CSS/styl.css"&gt;
         &lt;title&gt;Titulek&lt;/title&gt;
       &lt;/head&gt;
@@ -136,7 +347,7 @@
           &lt;/article&gt;
           &lt;article&gt;
             &lt;p&gt;<mark>"Článek2"</mark>&lt;/p&gt;
-        &lt;/article&gt;
+          &lt;/article&gt;
         &lt;/section&gt;
         &lt;aside&gt;
           &lt;p&gt;<mark>"Postraní panel"</mark>&lt;/p&gt;
@@ -148,6 +359,80 @@
       &lt;/html&gt;
         </code>
       </pre>
+      <dl>
+        <dt><code>&lt;!DOCTYPE html&gt; </code></dt>
+        <dd>Definujeme že se jedná o HTML5 dokument.</dd>
+      </dl>
+      <dl>
+        <dt><code>&lt;html&gt;&lt;/html&gt;</code></dt>
+        <dd>Root Element (top-level element) = Kořenový element, potomky jsou elementy <strong>head</strong> a
+          <strong>body</strong>.</dd>
+      </dl>
+      <dl>
+        <dt><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></dt>
+        <dd>Nechceme převádět CSS pixel na fizický pixel</dd>
+      </dl>
+    </article>
+    <!-- Block-level elements -->
+    <article>
+      <h2>Block-level Element (Na úrovni bloku)</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Elementu</th>
+            <th>Popis</th>
+            <th>Globální atributy</th>
+            <th>Vlastni atribut</th>
+            <th>Kompatibilní</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>&lt;address&gt;&lt;/address&gt;</code></td>
+            <td>Kontaktní informace.</td>
+            <td>ANO</td>
+            <td>NE</td>
+            <td>ANO</td>
+          </tr>
+          <tr>
+            <td><code>&lt;article&gt;&lt;/article&gt;</code></td>
+            <td>Obsah článku.</td>
+            <td>ANO</td>
+            <td>NE</td>
+            <td>ANO</td>
+          </tr>
+          <tr>
+            <td><code>&lt;aside&gt;&lt;/aside&gt;</code></td>
+            <td>Kromě obsahu.</td>
+            <td>ANO</td>
+            <td>NE</td>
+            <td>ANO</td>
+          </tr>
+          <tr>
+            <td><code>&lt;blockquote cite="URL ADRESA"&gt;&lt;/blockquote&gt;</code></td>
+            <td>Informace z jiného zdroje.</td>
+            <td>ANO</td>
+            <td>cite="URL ADRESA"</td>
+            <td>ANO</td>
+          </tr>
+          <tr>
+            <td><code>&lt;details&gt;&lt;/details&gt;</code></td>
+            <td>Widget zveřejnění.</td>
+            <td>ANO</td>
+            <td>open</td>
+            <td>NE</td>
+          </tr>
+          <tr>
+            <td><code>&lt;dialog&gt;&lt;/dialog&gt;</code></td>
+            <td>Dialogové okno.</td>
+            <td>ANO</td>
+            <td>open</td>
+            <td>NE</td>
+          </tr>
+        </tbody>
+      </table>
+
     </article>
     <!-- Rodiče HTML5 -->
     <article>
@@ -162,18 +447,10 @@
         </thead>
         <tbody>
           <tr>
-            <td>&lt;!DOCTYPE html&gt;</td>
-            <td>Definujeme že se jedná o dokument HTML5</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;html&gt;&lt;/html&gt;</td>
-            <td>Root Element (top-level element) = Kořenový element, všechny ostatní elementy musí být potomky tohoto
-              elemetu (HEAD a BODY).</td>
             <td>
               <dl>
                 <dt>lang</dt>
-                <dd>Definujeme v jakém jazyce je napsána stránka</dd>
+                <dd>Definujeme v jakém jazyce je napsána stránka.</dd>
                 <dt>manifest</dt>
                 <dd></dd>
                 <dt>xmlns</dt>
@@ -226,14 +503,16 @@
               <dl>
                 <dt>charset</dt>
                 <dd>Deklaruje kódování znaků dokumentu.</dd>
+
                 <dt>content</dt>
                 <dd></dd>
+
                 <dt>http-equiv</dt>
                 <dd></dd>
+
                 <dt>name</dt>
                 <dd></dd>
-                <dt>name</dt>
-                <dd></dd>
+
               </dl>
             </td>
           </tr>
