@@ -63,8 +63,8 @@
       <p>VSC: &quot;c&quot;</p>
 
       <pre>
-        <code class="Green">
-     &lt;!-- Komentář --&gt;
+        <code>
+      &lt;!-- Komentář --&gt;
         </code>
       </pre>
     </article>
@@ -103,6 +103,7 @@
     <!-- Globální atributy -->
     <article>
       <h2>Globální atributy</h2>
+
       <table>
         <thead>
           <tr>
@@ -366,7 +367,8 @@
       <dl>
         <dt><code>&lt;html&gt;&lt;/html&gt;</code></dt>
         <dd>Root Element (top-level element) = Kořenový element, potomky jsou elementy <strong>head</strong> a
-          <strong>body</strong>.</dd>
+          <strong>body</strong>.
+        </dd>
       </dl>
       <dl>
         <dt><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></dt>
@@ -374,66 +376,306 @@
       </dl>
     </article>
     <!-- Block-level elements -->
-    <article>
+    <section>
       <h2>Block-level Element (Na úrovni bloku)</h2>
+      <!-- Základní -->
+      <article>
+        <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Popis</th>
+              <th>Globální atributy</th>
+              <th>Vlastni atribut</th>
+              <th>Kompatibilní</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&lt;div&gt;&lt;/div&gt;</code></td>
+              <td>Universální Element</td>
+              <td>ANO</td>
+              <td>NE</td>
+              <td>ANO</td>
+            </tr>
+            <tr>
+              <td><code>&lt;address&gt;&lt;/address&gt;</code></td>
+              <td>Kontaktní informace.</td>
+              <td>ANO</td>
+              <td>NE</td>
+              <td>ANO</td>
+            </tr>
+            <tr>
+              <td><code>&lt;article&gt;&lt;/article&gt;</code></td>
+              <td>Obsah článku.</td>
+              <td>ANO</td>
+              <td>NE</td>
+              <td>ANO</td>
+            </tr>
+            <tr>
+              <td><code>&lt;aside&gt;&lt;/aside&gt;</code></td>
+              <td>Kromě obsahu.</td>
+              <td>ANO</td>
+              <td>NE</td>
+              <td>ANO</td>
+            </tr>
+            <tr>
+              <td><code>&lt;blockquote cite="URL ADRESA"&gt;&lt;/blockquote&gt;</code></td>
+              <td>Informace z jiného zdroje.</td>
+              <td>ANO</td>
+              <td>cite="URL ADRESA"</td>
+              <td>ANO</td>
+            </tr>
+            <tr>
+              <td><code>&lt;details&gt;&lt;/details&gt;</code></td>
+              <td>Widget zveřejnění.</td>
+              <td>ANO</td>
+              <td>open</td>
+              <td>NE</td>
+            </tr>
+            <tr>
+              <td><code>&lt;dialog&gt;&lt;/dialog&gt;</code></td>
+              <td>Dialogové okno.</td>
+              <td>ANO</td>
+              <td>open</td>
+              <td>NE</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <!-- Tabulka -->
+      <article>
+        <h3>Tabulka</h3>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Elementu</th>
-            <th>Popis</th>
-            <th>Globální atributy</th>
-            <th>Vlastni atribut</th>
-            <th>Kompatibilní</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>&lt;address&gt;&lt;/address&gt;</code></td>
-            <td>Kontaktní informace.</td>
-            <td>ANO</td>
-            <td>NE</td>
-            <td>ANO</td>
-          </tr>
-          <tr>
-            <td><code>&lt;article&gt;&lt;/article&gt;</code></td>
-            <td>Obsah článku.</td>
-            <td>ANO</td>
-            <td>NE</td>
-            <td>ANO</td>
-          </tr>
-          <tr>
-            <td><code>&lt;aside&gt;&lt;/aside&gt;</code></td>
-            <td>Kromě obsahu.</td>
-            <td>ANO</td>
-            <td>NE</td>
-            <td>ANO</td>
-          </tr>
-          <tr>
-            <td><code>&lt;blockquote cite="URL ADRESA"&gt;&lt;/blockquote&gt;</code></td>
-            <td>Informace z jiného zdroje.</td>
-            <td>ANO</td>
-            <td>cite="URL ADRESA"</td>
-            <td>ANO</td>
-          </tr>
-          <tr>
-            <td><code>&lt;details&gt;&lt;/details&gt;</code></td>
-            <td>Widget zveřejnění.</td>
-            <td>ANO</td>
-            <td>open</td>
-            <td>NE</td>
-          </tr>
-          <tr>
-            <td><code>&lt;dialog&gt;&lt;/dialog&gt;</code></td>
-            <td>Dialogové okno.</td>
-            <td>ANO</td>
-            <td>open</td>
-            <td>NE</td>
-          </tr>
-        </tbody>
-      </table>
+        <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Popis</th>
+              <th>Globální atribut</th>
+              <th>Vlastni Atribut</th>
+              <th>Kompatibilní</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&lt;Table&gt;&lt;/table&gt;</code></td>
+              <td>Začátek a konec tabulky</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><code>&lt;thead&gt;&lt;/thead&gt;</code></td>
+              <td>Popis hodnot co znamenají ve sloupcích</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><code>&lt;tbody&gt;&lt;/tbody&gt;</code></td>
+              <td>Obsah tabulky</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><code>&lt;th&gt;&lt;/th&gt;</code></td>
+              <td>table header = nadpis tabulky (píšeme místo <code>&lt;td&gt;</code>)</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><code>&lt;tr&gt;&lt;/tr&gt;</code></td>
+              <td>table row = řádek tabulky</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><code>&lt;td&gt;&lt;/td&gt;</code></td>
+              <td>table data</td>
+              <td></td>
+              <td>colspan/rowspan="počet buňek" - slučuje buňky v: řádku tabulky/sloupci tabulky</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
 
-    </article>
+        <h4>Vzor</h4>
+
+        <pre>
+          <code>
+      &lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Nadpis tabulky&lt;/th&gt;
+            &lt;th&gt;Nadpis tabulky 2&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;obsach buňky&lt;/td&gt;
+            &lt;td&gt;obsach buňky 2&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+          </code>
+        </pre>
+      </article>
+      <!-- Seznamy -->
+      <article>
+
+        <h3>Seznamy</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Popis</th>
+              <th>Globální atribut</th>
+              <th>Vlastni Atribut</th>
+              <th>Kompatibilní</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&lt;ul&gt;&lt;/ul&gt;</code></td>
+              <td>Unordered List = Neuspořádaný seznam</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><code>&lt;ol&gt;&lt;/ol&gt;</code></td>
+              <td>Ordered List = Uspořádaný seznam</td>
+              <td></td>
+              <td>reversed, start, type</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><code>&lt;li&gt;&lt;/li&gt;</code></td>
+              <td>List Item = Položka seznamu</td>
+              <td></td>
+              <td>value</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Neuspořádaný seznam</h4>
+
+        <pre>
+          <code>
+      &lt;ul&gt;
+        &lt;li&gt;Text0&lt;/li&gt;
+        &lt;li&gt;Text1&lt;/li&gt;
+      &lt;/ul&gt;
+          </code>
+        </pre>
+
+        <h4>Uspořádaný seznam</h4>
+
+        <pre>
+          <code>
+      &lt;ol&gt;
+        &lt;li&gt;Text0&lt;/li&gt;
+        &lt;li&gt;Text1&lt;/li&gt;
+      &lt;/ol&gt;
+          </code>
+        </pre>
+      </article>
+      <!-- Slovníček pojmů (Definition List) -->
+      <article>
+
+        <h3>Slovníček pojmů (Definition List)</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Popis</th>
+              <th>Globální atribut</th>
+              <th>Vlastni Atribut</th>
+              <th>Kompatibilní</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&lt;dl&gt;&lt;/dl&gt;</code></td>
+              <td>Definition List = Slovníček pojmů</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><code>&lt;dt&gt;&lt;/dt&gt;</code></td>
+              <td>Definition Term = Vysvětlovaný pojem</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><code>&lt;dd&gt;&lt;/dd&gt;</code></td>
+              <td>Definition Definition = Vysvětlený pojmu</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Slovníček pojmů</h4>
+
+        <pre>
+          <code>
+      &lt;dl&gt;
+        &lt;dt&gt;Vysvětlovaný pojem&lt;/dt&gt;
+        &lt;dd&gt;Vysvětlený pojmu&lt;/dd&gt;
+      &lt;/dl&gt;
+          </code>
+        </pre>
+      </article>
+      <!-- pre + code -->
+      <article>
+
+        <h3>pre + code</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Popis</th>
+              <th>Globální atribut</th>
+              <th>Vlastni Atribut</th>
+              <th>Kompatibilní</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&lt;pre&gt;&lt;/pre&gt;</code></td>
+              <td>Předformátovaný text.</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>pre + code</h4>
+
+        <pre>
+          <code>
+    &lt;pre&gt;
+      &lt;code&gt;
+        kód....
+      &lt;/code&gt;
+    &lt;/pre&gt;        
+          </code>
+        </pre>
+      </article>
+    </section>
     <!-- Rodiče HTML5 -->
     <article>
       <h2>Rodiče HTML5</h2>
@@ -762,173 +1004,7 @@
         </tr>
       </table>
     </article>
-    <!-- Tabulka -->
-    <article>
-      <h3>Tabulka</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Tag</th>
-            <th>Popis</th>
-            <th>Atribut</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>&lt;Table&gt; tabulka &lt;/table&gt;</td>
-            <td>Začátek a konec tabulky</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;thead&gt; hlavička tabulky &lt;/thead&gt;</td>
-            <td>Popis hodnot co znamenají ve sloupcích</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;tbody&gt; tělo tabulky &lt;/tbody&gt;</td>
-            <td>Obsah tabulky</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;th&gt; popis tabulky &lt;/th&gt;</td>
-            <td>table header = nadpis tabulky (píšeme místo &lt;td&gt;)</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;tr&gt; řádek tabulky&lt;/tr&gt;</td>
-            <td>table row = řádek tabulky</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;td colspan/rowspan="2"&gt; buňka tabulky &lt;/td&gt;</td>
-            <td>table data</td>
-            <td>colspan/rowspan="počet buňek" - slučuje buňky v: řádku tabulky/sloupci tabulky</td>
-          </tr>
-        </tbody>
-      </table>
-      <h4>Vzor</h4>
-      <p>
-        &lt;table&gt;
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;thead&gt;
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Nadpis
-        tabulky&lt;/th&gt;
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Nadpis
-        tabulky 2&lt;/th&gt;
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/thead&gt;
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;tbody&gt;
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;obsach
-        buňky&lt;/td&gt;
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;obsach
-        buňky 2&lt;/td&gt;
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tbody&gt;
-        <br>
-        &lt;/table&gt;
-      </p>
-    </article>
-    <!-- Seznamy -->
-    <article>
-      <h2>Seznamy</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Tag</th>
-            <th>Popis</th>
-            <th>Atribut</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>&lt;ul&gt;&lt;/ul&gt;</td>
-            <td>Unordered List = Neuspořádaný seznam</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;ol&gt;&lt;/ol&gt;</td>
-            <td>Ordered List = Uspořádaný seznam</td>
-            <td>reversed, start, type</td>
-          </tr>
-          <tr>
-            <td>&lt;li&gt;&lt;/li&gt;</td>
-            <td>List Item = Položka seznamu</td>
-            <td>value</td>
-          </tr>
-        </tbody>
-      </table>
-      <h4>Vzor</h4>
-      <p>
-        &lt;ul&gt;
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Text0&lt;/li&gt;
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Text1&lt;/li&gt;
-        <br>
-        &lt;/ul&gt;
-        <br>
-        <br>
-        Nebo:
-        <br>
-        &lt;ol&gt;
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Text0&lt;/li&gt;
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Text1&lt;/li&gt;
-        <br>
-        &lt;/ol&gt;
-      </p>
-      <h3>Slovníček pojmů (Definition List)</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Tag</th>
-            <th>Popis</th>
-            <th>Atribut</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>&lt;dl&gt;&lt;/dl&gt;</td>
-            <td>Definition List = Slovníček pojmů</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;dt&gt;&lt;/dt&gt;</td>
-            <td>Definition Term = Vysvětlovaný pojem</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;dd&gt;&lt;/dd&gt;</td>
-            <td>Definition Definition = Vysvětlený pojmu</td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-      <h4>Vzor</h4>
-      <p>
-        &lt;dl&gt;
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt;Vysvětlovaný pojem&lt;/dt&gt;
-        <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;Vysvětlený pojmu&lt;/dd&gt;
-        <br>
-        &lt;/dl&gt;
-      </p>
-    </article>
+
     <!-- Entity -->
     <article>
       <h2>Entity</h2>

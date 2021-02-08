@@ -95,3 +95,9 @@ strong {
 code {
     background-color: rgb(68, 68, 68);
 }
+
+a {
+    background-color: blue;
+    text-decoration: none; /*odstraní podškrtnutí odkazu*/
+    color: cornsilk;
+}
