@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html html lang="cs-cz">
+<html lang="cs-cz">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Pikaheim.cz">
+  <meta name="description" content="Základní znalosti pro tvorbu webových stránek.">
+  <link rel="shortcut icon" href="./IMG/favicon.ico" type="image/x-icon">	
   <link rel="stylesheet" type="text/css" href="/CSS/styl.css">
   <title>HTML5</title>
 </head>
-
+<!-- <code>&lt;div&gt;&lt;/div&gt;</code> -->
 <body>
   <header>
     <nav>
@@ -55,6 +58,9 @@
 
       <h2>Kontrola validace</h2>
       <a href="https://validator.w3.org/nu/#textarea">validace na validator.w3.org</a>
+
+      <h2>Kontrola google search</h2>
+      <a href="https://search.google.com/search-console/welcome?hl=cs&utm_source=wmx&utm_medium=deprecation-pane&utm_content=home">Kontrola google search</a>
     </article>
     <!-- Komentář -->
     <article>
@@ -369,12 +375,74 @@
         <dd>Root Element (top-level element) = Kořenový element, potomky jsou elementy <strong>head</strong> a
           <strong>body</strong>.
         </dd>
+        <dd>Atribut lang="cs-cz" - nastavení jazyka webové stránky.</dd>
       </dl>
       <dl>
         <dt><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></dt>
         <dd>Nechceme převádět CSS pixel na fizický pixel</dd>
       </dl>
     </article>
+    <!-- Hlava HTML -->
+    <section>
+      <article>
+        <h2>Hlava HTML <code>&lt;head&gt;&lt;/head&gt;</code></h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Element Metadata</th>
+              <th>Popis</th>
+              <th>Globální atributy</th>
+              <th>Kompatibilní</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&lt;title&gt;Název dokumentu&lt;/title&gt;</code></td>
+              <td>Zobrazuje se v záhlaví prohlížeče nebo na záložce stránky. Pouze text; značky v elementu jsou ignorovány.</td>
+              <td>ANO</td>
+              <td>ANO</td>
+            </tr>
+            <tr>
+              <td><code>&lt;meta charset="UTF-8"&gt;</code></td>
+              <td>Kódování znaků dokumentu - znakovou sadu (UTF-8 = Universální znaková sada).</td>
+              <td></td>
+              <td>ANO</td>
+            </tr>
+            <tr>
+              <td><code>&lt;meta name="author" content="Jméno autorua"&gt;</code></td>
+              <td>Kdo dokument vytvořil.</td>
+              <td></td>
+              <td>ANO</td>
+            </tr>
+            <tr>
+              <td><code>&lt;meta name="description" content="Popis stránky"&gt;</code></td>
+              <td>Krátký popis dokumentu - optimalizace pro vyhledávače nebo SEO.</td>
+              <td></td>
+              <td>ANO</td>
+            </tr>
+            <tr>
+              <td><code>&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;</code></td>
+              <td>favicon.ico (16x16 pixelů) = ikona webu (zobrazuje se v záhlaví prohlížeče vedle title).</td>
+              <td></td>
+              <td>ANO</td>
+            </tr>
+            <tr>
+              <td><code>&lt;link rel="stylesheet" type="text/css" href="styl.css"&gt;</code></td>
+              <td>styl.css - víc v kapitole CSS.</td>
+              <td></td>
+              <td>ANO</td>
+            </tr>
+            <tr>
+              <td><code>&lt;script src="my-js-file.js" defer&gt;&lt;/script&gt;</code></td>
+              <td>my-js-file.js - víc v kapitole JavaScriptu.</td>
+              <td></td>
+              <td>ANO</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>  
+    </section>
     <!-- Block-level elements -->
     <section>
       <h2>Block-level Element (Na úrovni bloku)</h2>
