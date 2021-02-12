@@ -6,11 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Pikaheim.cz">
   <meta name="description" content="Základní znalosti pro tvorbu webových stránek.">
-  <link rel="shortcut icon" href="./IMG/favicon.ico" type="image/x-icon">	
+  <link rel="shortcut icon" href="./IMG/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="/CSS/styl.css">
   <title>HTML5</title>
 </head>
 <!-- <code>&lt;div&gt;&lt;/div&gt;</code> -->
+
 <body>
   <header>
     <nav>
@@ -60,7 +61,9 @@
       <a href="https://validator.w3.org/nu/#textarea">validace na validator.w3.org</a>
 
       <h2>Kontrola google search</h2>
-      <a href="https://search.google.com/search-console/welcome?hl=cs&utm_source=wmx&utm_medium=deprecation-pane&utm_content=home">Kontrola google search</a>
+      <a
+        href="https://search.google.com/search-console/welcome?hl=cs&utm_source=wmx&utm_medium=deprecation-pane&utm_content=home">Kontrola
+        google search</a>
     </article>
     <!-- Komentář -->
     <article>
@@ -399,7 +402,8 @@
           <tbody>
             <tr>
               <td><code>&lt;title&gt;Název dokumentu&lt;/title&gt;</code></td>
-              <td>Zobrazuje se v záhlaví prohlížeče nebo na záložce stránky. Pouze text; značky v elementu jsou ignorovány.</td>
+              <td>Zobrazuje se v záhlaví prohlížeče nebo na záložce stránky. Pouze text; značky v elementu jsou
+                ignorovány.</td>
               <td>ANO</td>
               <td>ANO</td>
             </tr>
@@ -441,7 +445,7 @@
             </tr>
           </tbody>
         </table>
-      </article>  
+      </article>
     </section>
     <!-- Block-level elements -->
     <section>
@@ -834,208 +838,6 @@
         </pre>
       </article>
     </section>
-    <!-- Rodiče HTML5 -->
-    <article>
-      <h2>Rodiče HTML5</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Element</th>
-            <th>Popis</th>
-            <th>Atribut</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <dl>
-                <dt>lang</dt>
-                <dd>Definujeme v jakém jazyce je napsána stránka.</dd>
-                <dt>manifest</dt>
-                <dd></dd>
-                <dt>xmlns</dt>
-                <dd></dd>
-              </dl>
-            </td>
-          </tr>
-          <tr>
-            <td>&lt;head&gt;&lt;/head&gt;</td>
-            <td>Header = Záhlaví dokumentu obsahuje strojově čitelné informace (Metadata) o dokumentu.</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;body&gt;&lt;/body&gt;</td>
-            <td>Definuje tělo dokumentu a slouží jako kontejner pro všechny viditelné obsahu, jako jsou nadpisy,
-              odstavce, obrázky, hypertextové odkazy, tabulky, seznamy, atd</td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-    </article>
-    <!-- HTML5 Potomky pro HEAD element -->
-    <article>
-      <h2>HTML5 Potomky pro HEAD element</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Element</th>
-            <th>Popis</th>
-            <th>Atribut</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>&lt;base&gt;</td>
-            <td>Base = Základní adresa URL</td>
-            <td>
-              <dl>
-                <dt>href</dt>
-                <dd></dd>
-                <dt>target</dt>
-                <dd></dd>
-              </dl>
-            </td>
-          </tr>
-          <tr>
-            <td>&lt;meta&gt;</td>
-            <td>Metadata = Definuje data pro prohlížeče</td>
-            <td>
-              <dl>
-                <dt>charset</dt>
-                <dd>Deklaruje kódování znaků dokumentu.</dd>
-
-                <dt>content</dt>
-                <dd></dd>
-
-                <dt>http-equiv</dt>
-                <dd></dd>
-
-                <dt>name</dt>
-                <dd></dd>
-
-              </dl>
-            </td>
-          </tr>
-          <tr>
-            <td>&lt;style&gt;&lt;/style&gt;</td>
-            <td>CSS = Informace o stylování dokumentu, je lepší CSS uložit do externího souboru a použit jej pomocí
-              &lt;link&gt; elementu.</td>
-            <td>viz sekce CSS</td>
-          </tr>
-          <tr>
-            <td>&lt;link&gt;</td>
-            <td>External Resource Link element = Propojuje aktuální dokument s externím zdrojem.</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;script&gt;&lt;/script&gt;</td>
-            <td>Script = Vložení spustitelného kódu nebo dat (JavaScript, webGL, GLSL a JSON).</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;noscript&gt;&lt;/noscript&gt;</td>
-            <td>Noscript = Definuje část kódu, který se vloží, pokud není podporován script, nebo je vypnut v
-              prohlížeči.</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;template&gt;&lt;/template&gt;</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;title&gt;&lt;/title&gt;</td>
-            <td>Title = Definuje název dokumentu, který se zobrazuje v záhlaví prohlížeče nebo na záložce stránky.</td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-    </article>
-    <!-- HTML5 Potomky pro BODY element -->
-    <article>
-      <h2>HTML5 Potomky pro BODY element</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Element</th>
-            <th>Popis</th>
-            <th>Atribut</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>&lt;section&gt;&lt;section&gt;</td>
-            <td>Definuje části stránky (kapitoly)</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;article&gt;&lt;article&gt;</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;main&gt;&lt;main&gt;</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;aside&gt;&lt;aside&gt;</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;header&gt;&lt;header&gt;</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;footer&gt;&lt;footer&gt;</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;nav&gt;&lt;nav&gt;</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;figure&gt;&lt;figure&gt;</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;figcaption&gt;&lt;figcaption&gt;</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;h1&gt;&lt;h2&gt; - &lt;h6&gt; Nadpis &lt;/h1&gt;&lt;/h2&gt; - &lt;/h6&gt;</td>
-            <td>Headings = Nadpis, &lt;h1&gt;definuje nejdůležitější nadpis, &lt;h6&gt;definuje nejméně důležitý nadpis.
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;p&gt; text &lt;/p&gt;</td>
-            <td>paragraph = odstavec</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;pre&gt; text &lt;/pre&gt;</td>
-            <td>Text je zobrazen s pevnou šířkou, zachovává mezery a konce řádků.</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt;hr&gt;</td>
-            <td>Horizontal Rules = Horizontální čára</td>
-            <td></td>
-          </tr>
-          <td>&lt;br&gt;</td>
-          <td>Line Breaks = zalomení řádku</td>
-          <td></td>
-          <tr>
-        </tbody>
-      </table>
-    </article>
     <!-- Elementy na formátování HTML -->
     <article>
       <h2>Elementy na formátování HTML</h2>
@@ -1112,57 +914,174 @@
         </tbody>
       </table>
     </article>
-    <!-- Citace -->
-    <article>
-      <h2>Citace</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Tag</th>
-            <th>Popis</th>
-            <th>Atribut</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>&lt;blockquote&gt;<blockquote> text </blockquote>&lt;/blockquote&gt;</td>
-            <td>definuje odstavec, který je citován z jiného zdroje.</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt; &gt;<> text </>&lt;/ &gt;</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt; &gt;<> text </>&lt;/ &gt;</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>&lt; &gt;<> text </>&lt;/ &gt;</td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-    </article>
     <!-- odkaz a IMG -->
-    <article>
-      <h2>odkaz a IMG</h2>
-      <table>
-        <td>&lt;a&gt; href="Cíl odkazu"<a href="">odkaz</a>&lt;/a&gt;</td>
-        <td>anchor = zakotvit, připoutat</td>
-        <td></td>
-        </tr>
-        <tr>
-          <td>&lt;img src="Zdrojový soubor" alt="alternativní text"&gt;</td>
-          <td>image = obrázek</td>
-          <td>width, height</td>
-        </tr>
-      </table>
-    </article>
+    <section>
+      <h2>Odkaz a IMG</h2>
+      <!-- Anatomie odkazu -->
+      <article>
+        <table>
+          <thead>
+              <tr>
+                <th>Element</th>
+                <th>Popis</th>
+                <th>Globální atributy</th>
+                <th>Vlastni atribut</th>
+                <th>Kompatibilní</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&lt;a href="Cíl odkazu"&gt;Text co vidí uživatel&lt;/a&gt;</code></td>
+              <td>
+                <ul>
+                  <li>anchor = zakotvit, připoutat</li>
+                  <li>href="Cíl odkazu" - povyný atribut</li>
+                </ul>
+              </td>
+              <td>ANO</td>
+              <td>ANO viz níže.</td>
+              <td>ANO</td>
+            </tr>
+            <tr>
+              <td><code>&lt;img src="Zdrojový soubor" alt="alternativní text"&gt;</code></td>
+              <td>image = obrázek</td>
+              <td>width, height</td>
+            </tr>
+          </tbody>
+        </table>
 
+        <h3>Vzory pro &lt;a&gt; Elementy</h3>
+
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">Atributy pro &lt;a&gt; Element</a></p>
+        <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Ukázka</th>
+              <th>Popis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&lt;a href="/index.html" download="HTML5"&gt;download&lt;/a&gt;</code></td>
+              <td><code><a href="/index.html" download="HTML5">download</a></code></td>
+              <td>
+                <ul>
+                  <li>"/index.html" = URL adresa</li>
+                  <li>"HTML5" = jak se bude jmenovat soubor po stažení</li>
+                  <li>znaky / a \ se přepíšou na _ .</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><code>&lt;a href="/IMG/favicon.ico"&gt;&lt;img src="/IMG/favicon.ico" alt="MujFavicon"&gt;&lt;/a&gt;</code></td>
+              <td><code><a href="/IMG/favicon.ico"><img src="/IMG/favicon.ico" alt="MujFavicon"></a></code></td>
+              <td>
+                <ul>
+                  <li>"/IMG/favicon.ico" = URL adresa</li>
+                  <li>"MujFavicon" = Textový popis obrázku.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><code>&lt;a href="mailto:Email@adresa.com"&gt;Email&lt;/a&gt;</code></td>
+              <td><code><a href="mailto:Email@adresa.com">Email</a></code></td>
+              <td>
+                <ul>
+                  <li>Odkaz na Email.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><code>&lt;a href="tel:666777888"&gt;Tel&lt;/a&gt;</code></td>
+              <td><code><a href="tel:666777888">Tel</a></code></td>
+              <td>
+                <ul>
+                  <li>Odkaz na tel.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><code>&lt;a href="" title="Kukuč"&gt;title ukázka&lt;/a&gt;</code></td>
+              <td><code><a href="" title="Kukuč">title ukázka</a></code></td>
+              <td>
+                <ul>
+                  <li>Popis který se zobrazí po najetí myši.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>       
+      </article>
+      <!-- URL -->
+      <article>
+        <h3>URL - Uniform Resource Locator</h3>
+
+        <h4>Odkaz na konkrétní část dokumentu HTML</h4>
+        <ol>
+          <li>Elementu přiřadíme ID.</li>
+          <li>"index.html#Email_adresa" = HTML soubor # Název ID</li>
+        </ol>
+
+        <pre>
+          <code>
+      &lt;h2 id="Email_adresa"&gt;Můj Email&lt;/h2&gt;
+      &lt;p&gt;Kontak na mě &lt;a href="index.html#Email_adresa"&gt;Můj Email&lt;/a&gt;.&lt;/p>        
+          </code>
+        </pre>
+        
+        <h4>Absolutní URL</h4>
+
+        <p>Odkazuje přesně definované umístění na webu.</p>
+        <p><code>http://www.pikaheim.cz/</code></p>
+
+        <h4>Relativní URL</h4>
+
+        <p>Odkazuje na umístění, které je relativní k souboru, ze kterého odkazujete.</p>
+        <p><code>/IMG/favicon.ico</code></p>
+      </article>
+    </section>
+    <section>
+      <h2>Čas</h2>
+      
+      <p>Existuje mnoho různých způsobů, jak si lidé zapisují data.</p>
+      <pre>
+        <code>
+      &lt;!-- Standard simple date --&gt;
+      <time datetime="2016-01-20">20 January 2016</time>
+      &lt;time datetime="2016-01-20"&gt;20 January 2016&lt;/time&gt;
+
+
+      &lt;!-- Just year and month --&gt;
+      <time datetime="2016-01">January 2016</time>
+      &lt;time datetime="2016-01"&gt;January 2016&lt;/time&gt;
+
+      &lt;!-- Just month and day --&gt;
+      <time datetime="01-20">20 January</time>
+      &lt;time datetime="01-20"&gt;20 January&lt;/time&gt;
+
+      &lt;!-- Just time, hours and minutes --&gt;
+      <time datetime="19:30">19:30</time>
+      &lt;time datetime="19:30"&gt;19:30&lt;/time&gt;
+
+      &lt;!-- You can do seconds and milliseconds too! --&gt;
+      <time datetime="19:30:01.856">19:30:01.856</time>
+      &lt;time datetime="19:30:01.856"&gt;19:30:01.856&lt;/time&gt;
+
+      &lt;!-- Date and time --&gt;
+      <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
+      &lt;time datetime="2016-01-20T19:30"&gt;7.30pm, 20 January 2016&lt;/time&gt;
+
+      &lt;!-- Date and time with timezone offset --&gt;
+      <time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time>
+      &lt;time datetime="2016-01-20T19:30+01:00"&gt;7.30pm, 20 January 2016 is 8.30pm in France&lt;/time&gt;
+
+      &lt;!-- Calling out a specific week number --&gt;
+      <time datetime="2016-W04">The fourth week of 2016</time>
+      &lt;time datetime="2016-W04"&gt;The fourth week of 2016&lt;/time&gt;
+        </code>
+      </pre>
+    </section>
     <!-- Entity -->
     <article>
       <h2>Entity</h2>
@@ -1252,5 +1171,4 @@
     Zde je footer
   </footer>
 </body>
-
 </html>
