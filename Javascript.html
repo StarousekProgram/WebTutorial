@@ -36,32 +36,38 @@
       </ul>
     </nav>
   </header>
-  
+
   <section>
     <!-- Javascript info -->
     <article>
-      <h1>Javascript (JS)</h1>
-      <p>JavaScript a Java jsou zcela odlišné jazyky, a to jak v koncepci, tak v designu. <br>
-        JavaScript vynalezl Brendan Eich v roce 1995 a v roce 1997 se stal standardem ECMA. <br>
-        ECMA-262 je oficiální název normy. ECMAScript je oficiální název jazyka.</p>
+      <h1>Javascript (JS)</h1>¨
+
+      <p>JavaScript a Java jsou zcela odlišné jazyky, a to jak v koncepci, tak v designu.</p>
+      <p>JavaScript vynalezl Brendan Eich v roce 1995 a v roce 1997 se stal standardem ECMA.</p>
+      <p>ECMA-262 je oficiální název normy. ECMAScript je oficiální název jazyka.</p>
     </article>
     <!-- Komentář -->
     <article>
       <h2>Komentáře</h2>
+
       <pre>
           <code>
-      // komentář na jeden řádek
-      /* komentář na více řádků */
+     <b>// komentář na jeden řádek</b>
+     <b>/* komentář na více řádků */</b>
           </code>
         </pre>
     </article>
-    <!-- Vložení JS do HTML stránky -->
+    <!-- Jak přidat JS -->
     <article>
-      <h2>Vložení JS do HTML stránky</h2>
+      <h2>Jak přidat JS</h2>
+
+      <h3>Inline JS</h3>
+
+      <p>Píšem přímo do body Elementu.</p>
+
       <pre>
         <code>
       &lt;script&gt; JS kód &lt;/script&gt;
-      &lt;script src="cesta k souboru.js"&gt;&lt;/script&gt; //píše se mezi &lt;head&gt;&lt;/head&gt;
         </code>
       </pre>
     </article>
@@ -102,25 +108,53 @@
     <!-- Proměnné -->
     <article>
       <h2>Proměnné, Konstanta</h2>
+
       <p>JS je dynamicky typovaný jazyk (dynamicky mění typy proměnných podle jejich obsahu).</p>
+
       <h3>Deklarace (vytváření) proměnných</h3>
-      <p>Znak rovná se (<strong>=</strong>) je operátorem <strong>„přiřazení“</strong>, nikoli operátorem <strong>„rovná se“</strong>.</p>
+
+      <p>Znak rovná se (<strong>=</strong>) je operátorem <strong>„přiřazení“</strong>, nikoli operátorem <strong>„rovná
+          se“</strong>.</p>
+
+      <h4>Proměnná</h4>
       <pre>
         <code>
-      let identifikatorPromenne = hodnota; 
-      var identifikatorPromenne = hodnota; /*stará verze*/
-      const identifikatorConstanty = hodnota;
+      let nazevPromenne;
+      let nazevPromenne = hodnota;
+      var nazevPromenne = hodnota; <b>/*stará verze*/</b>
         </code>
       </pre>
-      <h3>Pravidla pro identifikátory</h3>
+
+      <h4>globální proměnná</h4>
+
+      <pre>
+        <code>
+      nazevPromenne; 
+      nazevPromenne =  hodnota; 
+        </code>
+      </pre>
+
+      <h4>Konstanta - nelze měnit hodnotu.</h4>
+
+      <pre>
+        <code>
+      const nazevKonstanty = hodnota;          
+        </code>
+      </pre>
+
+      <h3>Pravidla pro nazevPromenne.</h3>
+
       <ul>
         <li>Musí mít jedinečný název.</li>
-        <li>Musí začínat písmenem (<strong>a-z</strong> nebo <strong>A-Z</strong>), znak dolaru (<strong>$</strong>) a znak potržítka (<strong>_</strong>).</li>
+        <li>Musí začínat písmenem (<strong>a-z</strong> nebo <strong>A-Z</strong>), znak dolaru (<strong>$</strong>) a
+          znak potržítka (<strong>_</strong>).</li>
         <li>Nesmí začítnat číslovkou (<strong>0, 1, 2, 3, ....</strong>).</li>
         <li>Nelze použít rezervovaná slova JS.</li>
         <li>Rozlišuje se velká a malá písmena.</li>
       </ul>
+
       <h3>Datové typy</h3>
+
       <table>
         <thead>
           <tr>
@@ -130,9 +164,9 @@
         </thead>
         <tbody>
           <tr>
-            <td><code>let identifikatorPromenne;</code></td>
+            <td>Proměnná bez hodnoty (<code>let nazevPromenne;</code>).</td>
             <td>Undefined</td>
-          </tr>    
+          </tr>
           <tr>
             <td>null;</td>
             <td>Null - objekt</td>
@@ -157,29 +191,32 @@
             <td></td>
             <td>Boolen (true, false) – pravda/nepravda</td>
           </tr>
-
         </tbody>
       </table>
+
     </article>
     <!-- Datum a čas -->
     <article>
       <h2>Datum a čas</h2>
+
       <pre>
         <code>
-      let promenna = new Date(); // vytvoří proměnnou, ve které je aktuální datum
-      promenna.getDate(); // číslo dne v měsíci
-      promenna.getFullYear(); // rok jako 4 čísla
-      promenna.getHours(); //hodiny
-      promenna.getMinutes(); //minuty
-      promenna.getSeconds(); //sekundy
-      promenna.getTime(); //počet milisekund od 1.1.1970 (UNIX TimeStamp)        
+      let nazevPromenne = new Date(); <b>// vytvoří objekt, ve které je aktuální datum</b>
+      nazevPromenne.getDate(); <b>// číslo dne v měsíci</b>
+      nazevPromenne.getFullYear(); <b>// rok jako 4 čísla</b>
+      nazevPromenne.getHours(); <b>//hodiny</b>
+      nazevPromenne.getMinutes(); <b>//minuty</b>
+      nazevPromenne.getSeconds(); <b>//sekundy</b>
+      nazevPromenne.getTime(); <b>//počet milisekund od 1.1.1970 (UNIX TimeStamp)</b>        
         </code>
       </pre>
     </article>
     <!-- Textové řetězce – string -->
     <article>
       <h2>Textové řetězce – string</h2>
+
       <!-- Tabulka s Speciální znaky -->
+      <h3>Speciální znaky</h3>
       <table>
         <thead>
           <th>Speciální znak</th>
@@ -216,11 +253,11 @@
           </tr>
           <tr>
             <td>\'</td>
-            <td>Jednoduchá uvozovka</td>
+            <td>Jednoduchá uvozovka (escape sekvence)</td>
           </tr>
           <tr>
             <td>\"</td>
-            <td>Dvojitá uvozovka</td>
+            <td>Dvojitá uvozovka (escape sekvence)</td>
           </tr>
           <tr>
             <td>\0</td>
@@ -228,34 +265,28 @@
           </tr>
         </tbody>
       </table>
-      <!-- escape sekvence -->
-      <h3>escape sekvence</h3>
-      <pre>
-        <code>
-      document.write("nějaký \" text");
-      // "nějaký " text"
-      document.write('nějaký \' text');
-      // "nějaký ' text"    
-        </code>
-      </pre>
       <!-- Apostrofy -->
       <h3>Apostrofy</h3>
+
       <pre>
         <code>
       document.write('Jmenuji se $jmeno \n S tímto "jménem" jsem spokojen.');
-      //"Jmenuji se $jmeno S tímto "jménem" jsem spokojen. "              
+      <b>//"Jmenuji se $jmeno S tímto "jménem" jsem spokojen. "</b>              
         </code>
+      </pre>
+      <pre>
         <code>
       echo('&lt;a href="#"&gt;Odkaz&lt;/a&gt;'); 
-      //Apostrofy se hodí na HTML Elementy - <a href="">Odkaz</a>
+      <b>//Apostrofy se hodí na HTML Elementy - <a href="">Odkaz</a></b>
         </code>
       </pre>
       <!-- Uvozovky -->
       <h3>Uvozovky</h3>
+
       <pre>
         <code>
       document.write("Jmenuji se $jmeno \n S tímto \"jménem\" jsem spokojen.");
-      //"Jmenuji se $jmeno S tímto "jménem" jsem spokojen."
+      <b>//"Jmenuji se $jmeno S tímto "jménem" jsem spokojen."</b>
         </code>
       </pre>
       <!-- Zápis řetězce s proměnnou -->
@@ -264,46 +295,108 @@
         <code>
       let jmeno = "Karel";
       document.write("Jmenuji se ", jmeno, "\n S tímto \"jménem\" jsem spokojen.");
-      // "Jmenuji se Karel S tímto "jménem" jsem spokojen."
+      <b>//"Jmenuji se Karel S tímto "jménem" jsem spokojen."</b>
         </code>
       </pre>
       <!-- Fungce (method) -->
       <h3>Fungce (method)</h3>
+
       <pre>
         <code>
-      let text = " Jmenuji se Karel ";
-      document.write(text[0]); 
-      // Vypíše nultý znak řetězce " "
-      document.write(text[3]); 
-      // Vypíše čtvrtý znak "e"
+      let text = "PikaHeim";
+      document.write(text[0]);
+      <b>//Vypíše první znak v textovém řetězci "P"</b> 
+        </code>
+      </pre>
+      <pre>
+        <code>
+      let text = "PikaHeim";
       document.write(text.length); 
-      // Vypíše počet znaků řetězce "18"
+      <b>//Vypíše počet znaků řetězce "8"</b>
+        </code>
+      </pre>
+      <pre>
+        <code>
+      let text = " PikaHeim ";
       document.write(text.trim()); 
-      // Bez bílých znaků před i za řetězcem "Jmenuji se Kare"
+      <b>//Odstraní bílé znaky před i za řetězcem "PikaHeim"</b>
+        </code>
+      </pre>
+      <pre>
+        <code>
+      let text = "jmenuji se PikaHeim";    
       document.write(text.replace("Karel", "Martin")); 
-      // Nahradí "Karel" za "Martin" - "Jmenuji se Martin"
-      document.write(text.toUpperCase()); 
-      // Velké znaky "JMENUJI SE KAREL"
-      document.write(text.toLowerCase()); 
-      // Malé znaky "jmenuji se karel"
-      document.write(text.substr(2,4)); 
-      // Vrací znaky od 2 pozice, 4 znaky "menu"
-      document.write(text.substring(2,4)); 
-      // Vrací znaky od 2 pozice do 4 pozice, tedy “me“
-      document.write(text.split("-")); 
-      //Rozdělí řetězec na pole     
-      ???
-      text.indexOf("ahoj"); // vrací první index
-      text.lastIndexOf("ahoj"); // vrací poslední nalezený index
-      text.search("ahoj"); // vrací index hledaného řetězce nebo REGEX výrazu (o těch se dozvíme dále)
+      <b>//Nahradí "PikaHeim" za "Martin" - "jmenuji se Martin"</b>
+        </code>
+      </pre>
+      <pre>
+        <code>
+      let text = "PikaHeim";
+      document.write(text.toUpperCase());
+      <b>//Změní všechny znaky v text. řetězci na velká "PIKAHEIM"</b>          
+        </code>
+      </pre>
+      <pre>
+        <code>
+      let text = "PIKAHEIM";
+      document.write(text.toLowerCase());
+      <b>//Změní všechny znaky v text. řetězci na malá "pikaheim"</b>       
+        </code>
+      </pre>
+      <pre>
+        <code>
+      let text0 = "Pika";
+      let text1 = "Heim";
+      let text2 = "Web";
+      let spojene = text0 + text1 + text2;
+      let spojene = text0.concat(text1,text2);
+      document.write(spojene);
+      <b>//Spojuje textové řetězce "PikaHeimWeb"</b>      
+        </code>
+      </pre>
+      <pre>
+        <code>
+      let text = "PikaHeim";
+      document.write(text.substr(2,4));
+      <b>//Vypíše 4 znaky od 2 znaku "kaHe"</b>    
+        </code>
+      </pre>
+      <pre>
+        <code>
+      let text = "PikaHeim";
+      document.write(text.substring(2,4));
+      <b>//Vypíše od 2 znaku do 4 znaku "ka"</b>   
+        </code>
+      </pre>
+      <pre>
+        <code>
+      let text0 = "Pika-Heim";
+      let text1 = text0.split("-");
+      document.write(text1); 
+      <b>//Rozdělí tex. řetězec na pole podle určitého znaku "Pika,Heim"</b>                 
+        </code>
+      </pre>
+      <pre>
+        <code>
+      let text0 = "PikaHeim";
 
-      text1 = "text1";
-      text2 = "text2";
-      text3 = "text3";
-      let spojene = str1.concat(str2,str3);
-      let spojene2 = str1 + str2 + str3;
-      //oba příkazy dělají to samá spojují řetězce:
-      //"text1text2text3"
+      let text1 = text0.indexOf("k");
+      document.write(text1); 
+      <b>//Vratí první index "2"</b>  
+      let text2 = text0.lastIndexOf("i");
+      document.write(text2); 
+      <b>//vrací poslední nalezený index "6"</b>
+      let text3 = text0.search("e"); 
+      document.write(text3);
+      <b>//Vrací index hledaného řetězce nebo REGEX výrazu (o těch se dozvíme dále) "5"</b> 
+        </code>
+      </pre>
+      <pre>
+        <code>
+      ????
+      let text0 = "PikaHeim";
+      let text1 = Text0.match(/i/g);
+      document.write(text1);
         </code>
       </pre>
     </article>
@@ -314,7 +407,7 @@
       <pre>
         <code>
       let x = 10;
-      let x = 10e5; // 10**5 = 1 000 000 vědecká (exponenciální) notace    
+      let x = 10e5; <b>// 10**5 = 1 000 000 vědecká (exponenciální) notace</b>    
         </code>
       </pre>
       <h3>Fungce (method)</h3>
@@ -322,93 +415,137 @@
         <code>
       let cislo = 1.23456789;
       let text = "text";
+      <b>//isNaN zjištuje jestli se jedná o číslo</b>
       promnenna = isNaN(cislo); 
-      //false
+      <b>//false</b> 
       promnenna = isNaN(text); 
-      //true
-      promnenna = cislo.toPrecision(4); 
-      // Ořízne číslo na danou přesnost - "1.235" poslední číslo zaokruhluje
-      promnenna = cislo.toString(); 
-      // Z čísla se stane tex. řetězec
-      promnenna = cislo.toExponential(2); 
-      // Převede číslo na exponenciální (vědeckou) notaci "1.23e+0"
-      promnenna = Number.MIN_VALUE; 
-      // nejmenší možné číslo v JS "5e-324"
-      promnenna = Number.MAX_VALUE;
-      // největší možné číslo v JS "1.7976931348623157e+308"
-      promnenna = parseInt(text);
-      // Převede textový řetězec (string) na číslo (number)"NaN"   
+      <b>//true</b>
         </code>
       </pre>
+      <pre>
+        <code>
+      promnenna = cislo.toPrecision(4); 
+      <b>// Ořízne číslo na danou přesnost - "1.235" poslední číslo zaokruhluje</b>
+        </code>
+      </pre>
+      <pre>
+        <code>
+      promnenna = cislo.toString(); 
+      <b>// Převede číslo (number) na textový řetězec (string)</b>          
+        </code>
+      </pre>
+      <pre>
+        <code>
+      promnenna = parseInt(text);
+      <b>// Převede textový řetězec (string) na číslo (number)"NaN"</b>
+        </code>
+      </pre>
+      <pre>
+        <code>
+      promnenna = cislo.toExponential(2); 
+      <b>// Převede číslo na exponenciální (vědeckou) notaci "1.23e+0"</b>
+        </code>
+      </pre>
+      <pre>
+        <code>
+      promnenna = Number.MIN_VALUE; 
+      <b>// nejmenší možné číslo v JS "5e-324"</b>
+        </code>
+      </pre>
+      <pre>
+        <code>
+      promnenna = Number.MAX_VALUE;
+      <b>// největší možné číslo v JS "1.7976931348623157e+308"</b>
+        </code>
+      </pre>
+    </article>
+    <!-- Knihovna Math -->
+    <article>
       <h3>Knihovna Math</h3>
-      <table>
-        <thead>
-          <th>Method</th>
-          <th>Popis</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>Math.PI</code></td>
-            <td>číslo PI</td>
-          </tr>
-          <tr>
-            <td><code>Math.E</code></td>
-            <td>Eulerovo číslo</td>
-          </tr>
-          <tr>
-            <td><code>Math.LN10</code></td>
-            <td>Logaritmus 10</td>
-          </tr>
-          <tr>
-            <td><code>Math.SQRT2</code></td>
-            <td>druhá odmocnina</td>
-          </tr>
-          <tr>
-            <td><code>Math.max(1,10)</code></td>
-            <td>Vrátí větší číslo. Opakem je funkce min()</td>
-          </tr>
-          <tr>
-            <td><code>Math.pow(4,3)</code></td>
-            <td>4 na třetí == 64</td>
-          </tr>
-          <tr>
-            <td><code>Math.sqrt(9)</code></td>
-            <td>2 odmocnina čísla</td>
-          </tr>
-          <tr>
-            <td><code>Math.random()</code></td>
-            <td>náhodné číslo 0 – 1</td>
-          </tr>
-          <tr>
-            <td><code>Math.abs(x)</code></td>
-            <td>absolutní hodnota čísla</td>
-          </tr>
-          <tr>
-            <td><code>Math.round(x)</code></td>
-            <td>zaokrouhlení podle obvyklých pravidel</td>
-          </tr>
-          <tr>
-            <td><code>Math.ceil(x)</code></td>
-            <td>zaokrouhlení nahoru</td>
-          </tr>
-          <tr>
-            <td><code>Math.floor(x)</code></td>
-            <td>zaokrouhlení dolů</td>
-          </tr>
-          <tr>
-            <td><code>Math.cos(x)</code></td>
-            <td>cosinus</td>
-          </tr>
-          <tr>
-            <td><code>Math.sin(x)</code></td>
-            <td>sinus</td>
-          </tr>
-          <tr>
-            <td><code>Math.log(x)</code></td>
-            <td>přirozený logaritmus (základem je Eulerovo číslo)</td>
-          </tr>
-        </tbody>
-      </table>
+      <pre>
+        <code>
+      let cislo = Math.PI;
+      <b>// Číslo PI "3.141592653589793"</b>
+        </code>
+      </pre>
+      <pre>
+        <code>
+      let cislo = Math.E;
+      <b>// Eulerovo číslo "2.718281828459045"</b>
+        </code>
+      </pre>
+      <pre>
+        <code>
+      let cislo = Math.LN10;
+      <b>// Logaritmus 10 "2.302585092994046"</b>
+        </code>
+      </pre>
+      <pre>
+        <code>
+      let cislo = Math.SQRT2;
+      <b>// Druhá odmocnina</b>
+        </code>
+      </pre>
+      <pre>
+        <code>
+      let cislo = Math.max(1,10);
+      <b>// Vrátí větší číslo. Opakem je funkce min()</b>    
+        </code>
+      </pre>
+      <pre>
+        <code>
+      Math.pow(4,3)
+      <b>// 4 na třetí == 64</b>
+        </code>
+      </pre>
+      <pre>
+        <code>
+      Math.sqrt(9)
+      <b>// 2 odmocnina čísla</b>
+        </code>
+      </pre>
+      <pre>
+        <code>
+      Math.random()
+      <b>// Náhodné číslo 0 – 1</b>
+        </code>
+      </pre>
+      <pre>
+      Math.abs(x)
+      <b>// Absolutní hodnota čísla</b>
+      </pre>
+      <pre>
+        <code>
+      Math.round(x)
+      <b>// Zaokrouhlení podle obvyklých pravidel</b>
+        </code>
+      </pre>
+      <pre>
+        <code>
+      Math.ceil(x)
+      <b>// Zaokrouhlení nahoru</b>
+        </code>
+      </pre>
+      <pre>
+        <code>
+      Math.floor(x)
+      <b>// Zaokrouhlení dolů</b>
+        </code>
+      </pre>
+      <pre>
+      Math.cos(x)
+      <b>// Cosinus</b>
+      </pre>
+      <pre>
+        <code>
+      Math.sin(x)
+      <b>// Sinus</b>
+        </code>
+      </pre>
+      <pre>
+      Math.log(x)
+      <b>// přirozený logaritmus (základem je Eulerovo číslo)</b>
+      </pre>
     </article>
     <!-- Podmínky -->
     <article>

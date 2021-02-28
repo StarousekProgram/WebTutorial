@@ -42,9 +42,11 @@
       <h1>CSS</h1>
       <dl>
         <dt>CSS (Cascading Style Sheets)</dt>
-        <dd>Je jazyk, speciálně vyvinutý pro stylování HTML</dd>
+        <dd>Deklarativní jazyk, který určuje, jak vypadají webové stránky v prohlížeči.</dd>
       </dl>
+      <p>CSS styluje elementy HTML, SVG nebo XML.</p>
       <p>CSS poprvé implementovala společnost microsoft v roce 1996 do internet Exploreru 3.0.</p>
+      <a href="https://www.w3.org/Style/CSS/">https://www.w3.org/Style/CSS/</a>
     </article>
     <!-- Komentář -->
     <article>
@@ -107,7 +109,7 @@
       <h2>Selektory</h2>
       <dl>
         <dt>Selektory (select = označit)</dt>
-        <dd>Selektory CSS se používají k "vyhledání" (nebo výběru) elementů HTML, které chcete stylovat.</dd>
+        <dd>Selektory CSS se používají k označení elementů HTML, které chcete stylovat.</dd>
       </dl>
       <dl>
         <dt>Identifikátor (#ID)</dt>
@@ -150,6 +152,18 @@
             <td><code>&lt;div&gt;&lt;/div&gt;</code></td>
             <td><code>div { CSS kód }</code></td>
             <td>Všechny Elementy div.</td>
+          </tr>
+          <tr>
+            <td>element element</td>
+            <td><code>&lt;div&gt;&lt;h1&gt;&lt;/h1&gt;&lt;/div&gt;</code></td>
+            <td><code>div h1 { CSS kód }</code></td>
+            <td>Potomek elementu div (h1).</td>
+          </tr>
+          <tr>
+            <td>element + element</td>
+            <td><code>&lt;div&gt;&lt;h1&gt;&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;/div&gt;</code></td>
+            <td><code>h1 + p{ CSS kód }</code></td>
+            <td>Elemtn h1 + p.</td>
           </tr>
           <tr>
             <td>element, element, element</td>
@@ -416,14 +430,14 @@
       <h3>HSL</h3>
       <a href="https://www.w3schools.com/css/css_colors_hsl.asp">w3schools</a>
     </article>
-    <!-- CSS declarations -->
+    <!-- CSS vlastnost (Properties) -->
     <article>
-      <h2>CSS declarations</h2>
+      <h2>CSS vlastnost (Properties)</h2>
 
       <table>
         <thead>
           <tr>
-            <th>CSS declarations</th>
+            <th>CSS vlastnost (Properties)</th>
             <th>Popis</th>
           </tr>
         </thead>
@@ -577,6 +591,13 @@
           <tr>
             <td><code>text-shadow: ;</code></td>
             <td>Stín textu</td>
+          </tr>
+          <tr>
+            <th>Seznamy</th>
+          </tr>
+          <tr>
+            <td><code>list-style-type: none;</code></td>
+            <td>Odstraní puntík</td>
           </tr>
         </tbody>
       </table>

@@ -6,6 +6,18 @@ body {
     color: blanchedalmond;
 }
 
+b {
+    color: green;
+}
+
+strong {
+    color: red;
+}
+
+code {
+    background-color: rgb(68, 68, 68);
+}
+
 /*Navigace*/
 nav {
     background-color: #FFA700;
@@ -88,13 +100,7 @@ td {
 tr:nth-child(even) {background-color: rgb(90, 0, 0)}
 tr:hover {background-color: blue;}
 
-strong {
-    color: red;
-}
 
-code {
-    background-color: rgb(68, 68, 68);
-}
 
 a {
     background-color: blue;
