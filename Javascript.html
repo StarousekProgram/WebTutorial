@@ -40,7 +40,7 @@
   <section>
     <!-- Javascript info -->
     <article>
-      <h1>Javascript (JS)</h1>¨
+      <h1>Javascript (JS)</h1>
 
       <p>JavaScript a Java jsou zcela odlišné jazyky, a to jak v koncepci, tak v designu.</p>
       <p>JavaScript vynalezl Brendan Eich v roce 1995 a v roce 1997 se stal standardem ECMA.</p>
@@ -613,83 +613,170 @@
       </table>
       <h3>Přetypovaní podmínek</h3>
       <img src="./IMG/PřetypovaníPodmínek.jpg" alt="Přetypovaní podmínek">
+
+      <h3>Základní podmínka</h3>
+
       <pre>
         <code>
-        if (Logický výraz)
-          kód který se vykoná když je pravda;    
+      if (log.výraz) {
+        <b>Kód který se vykoná když je pravda;</b>
+      }    
         </code>
+      </pre>
+      <pre>
         <code>
-        if ((log.výraz) && (log.výraz))
-          kód který se vykoná když je pravda;
-        else
-          kód který se vykoná když je nepravda;         
+      if (log.výraz) {
+        <b>Kód který se vykoná když je pravda;</b>
+      }   
+      else {
+        <b>Kód který se vykoná když je nepravda;</b>
+      }
         </code>
+      </pre>
+
+      <h3>Skládaní podmínek</h3>
+
+      <pre>
         <code>
-        if ((log.výraz) && (log.výraz))
-          kód který se vykoná když je pravda;
-        else if ((log.výraz) && (log.výraz)) //kód který se vykoná když je nepravda;
-          kód který se vykoná když je pravda;
-        else
-          kód který se vykoná když je nepravda;    
+      if ((log.výraz) && (log.výraz)) {
+        <b>Kód který se vykoná když jsou splněny log. výrazy;</b>
+      }   
+      else {
+        <b>Kód který se vykoná když je nepravda;</b>
+      }        
         </code>
-        <h3>boolean - true(pravda), false(nepravda)</h3>
+      </pre>
+      <pre>
         <code>
-        let vek = 26;
-        let zletily = (vek >= 18); //do proměnné se uloží true
-        document.write(zletily);
-        if (zletily) //true
-          document.write("ano"); //true
+      if ((log.výraz) || (log.výraz)) {
+        <b>Kód který se vykoná když je aspoň jeden log. výraz splněn;</b>
+      else {
+        <b>Kód který se vykoná když je nepravda;</b>
+      }          
         </code>
-        <h3>Ternární operátor</h3>
+      </pre>
+
+      <h3>Spojování podmínek</h3>
+
+      <pre>
         <code>
-        let muz = true; // nějaká proměnná udávající pohlaví
-        let nazevPohlavi = (muz) ? 'muž' : 'žena';
-        //(Logixký výraz) ? true : false;
-        document.write(nazevPohlavi); //"muž"
+      if (log.výraz) { 
+        <b>Kód který se vykoná když je pravda;</b>
+      }
+      <b>// Kód níže se vykoná když je nepravda</b>
+      else if (log.výraz) { 
+        <b>Kód který se vykoná když je pravda;</b>
+      }
+      else if (log.výraz) { 
+        <b>Kód který se vykoná když je pravda;</b>
+      }
+      else {
+        <b>Kód který se vykoná když je nepravda;</b>
+      }    
         </code>
-        <h3>switch – moc se nepoužívá</h3>
+      </pre>
+      <pre>
         <code>
-        let hodnota = 2;
-        let slovy;
-        switch (hodnota) {
-          case 1:
-            slovy = "jedna";
-            break;
-          case 2:
-            slovy = "dva";
-            break;
-          case 3:
-            slovy = "tři";
-            break;
-          default:
-            slovy = "nevím";
+      if ((log.výraz) && (log.výraz)) {
+        <b>Kód který se vykoná když je pravda;</b>
+      }
+      <b>// Kód níže se vykoná když je nepravda</b>   
+      else if ((log.výraz) && (log.výraz)) {
+        <b>Kód který se vykoná když je pravda;</b>
+      }  
+      else {
+        <b>Kód který se vykoná když je nepravda;</b>
+      }   
+        </code>
+      </pre>
+
+      <h3>switch</h3>
+
+      <pre>
+        <code>
+      let hodnota = 2;
+      let slovy;
+      switch (hodnota) {
+        case 1:
+          slovy = "jedna";
+          break;
+        case 2:
+          slovy = "dva";
+          break;
+        case 3:
+          slovy = "tři";
+          break;
+        default:
+          slovy = "nevím";
         }
-        document.write(slovy); //dva
+        document.write(slovy);<b> // "dva"</b>
         </code>
-        <h3>propadávání</h3>
+      </pre>
+
+      <h3>boolean - true(pravda), false(nepravda)</h3>
+
+      <pre>
         <code>
-        let mesic = 11;
-        switch (mesic) {
-          case 1:
-          case 2:
-          case 3:
-            document.write('Je první čtvrtletí.');
-            break;
-          case 4:
-          case 5:
-          case 6:
-            document.write('Je druhé čtvrtletí.');
-            break;
-          case 7:
-          case 8:
-          case 9:
-            document.write('Je třetí čtvrtletí.');
-            break;
-          case 10:
-          case 11: //zde se splní podmínka
-          case 12:
-            document.write('Je čtvrté čtvrtletí.'); // "Je čtvrté čtvrtletí."
-            break;
+      let vek = 26;
+      let zletily = (vek >= 18); <b> //Do proměnné se uloží true</b>
+      document.write(zletily); <b> //"true"</b>
+      <b>// Proměnnou použijem v podmínce</b>
+      if (zletily) {
+        <b>Kód který se vykoná když je pravda (ture);</b>        
+      }
+      else {
+        <b>Kód který se vykoná když je nepravda (false);</b>        
+      }
+        </code>
+      </pre>
+
+      <h3>prompt()</h3>
+
+      <p>Vyskakovací okénko pro premněnou</p>
+
+      <pre>
+        <code>
+      let vek = prompt("Zadej svůj věk");
+      if (vek >= 18)
+        document.write("Jsi plnoletý");
+      else
+        document.write("Nejsi plnoletý");    
+        </code>
+      </pre>
+
+      <h3>Ternární operátor</h3>
+      <pre>  
+        <code>
+      let muz = true; <b>// Boolean proměnná</b>
+      let nazevPohlavi = (muz) ? 'muž' : 'žena'; <b>//(Logixký výraz) ? true : false;</b>
+      document.write(nazevPohlavi); <b>//"muž"</b>
+        </code>
+      </pre>
+      <h3>propadávání</h3>
+      <pre>
+        <code>
+      let mesic = 11;
+      switch (mesic) {
+        case 1:
+        case 2:
+        case 3:
+          document.write('Je první čtvrtletí.');
+          break;
+        case 4:
+        case 5:
+        case 6:
+          document.write('Je druhé čtvrtletí.');
+          break;
+        case 7:
+        case 8:
+        case 9:
+          document.write('Je třetí čtvrtletí.');
+          break;
+        case 10:
+        case 11: <b>// zde se splní podmínka</b>
+        case 12:
+          document.write('Je čtvrté čtvrtletí.'); <b>// "Je čtvrté čtvrtletí."</b>
+          break;
         }
         </code>
       </pre>
