@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryba</title>
+</head>
+<body>
+    <script>
+        let pocet = prompt("Kolik ryb si dáš k večeři?");
+        // while
+        let i = 0;
+        while (i < pocet) {
+            i++;
+            document.write('<img src="./IMG/ryba.png" alt="RYBA">');
+        }
+        // Další řádek
+        document.write('<br>');
+
+        // for
+        for (let i =0; i<pocet; i++) {
+            document.write('<img src="./IMG/ryba.png" alt="RYBA">');            
+        }
+    </script>
+</body>
+</html>

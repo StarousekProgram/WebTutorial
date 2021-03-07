@@ -73,7 +73,7 @@
     </article>
     <!-- Výstupy v JS -->
     <article>
-      <h2>Výstupy v JS</h2>
+      <h2>Výstupy JS</h2>
       <table>
         <thead>
           <tr>
@@ -104,6 +104,15 @@
           </tr>
         </tbody>
       </table>
+    </article>
+    <article>
+      <h2>Vstupy JS</h2>
+    <pre>
+      <code>
+    <b>// Vyskakovací okénko s formulářem</b>
+    promnenna = prompt("Text co uvidí uživatel");    
+      </code>
+    </pre>
     </article>
     <!-- Proměnné -->
     <article>
@@ -784,28 +793,70 @@
     <!-- Cykly -->
     <article>
       <h2>Cykly</h2>
+
+      <h3>ukončení aktuálního cyklu:</h3>
       <pre>
-        <h3>ukončení aktuálního cyklu:</h3>
         <code>
           return; //viz návratová funkce 
           break; //stará verze
           continue; //ukončení pouze aktuální iterace (průběhu) cyklu a ne celého cyklu.
         </code>
-        <h3>for cyklus</h3>
+      </pre>
+
+      <h3>for cyklus</h3>
+
+      <p>Má pevný počet opakování.</p>
+
+      <pre>
         <code>
-          for (let i = 0; i &lt; 3; i++) { //proměná; podmínka; příkaz (++ nebo --)
-                document.write("Knock&lt;br /&gt;"); //3x"Knock"
-            }                
+      for (let i = 0; i &lt; 3; i++) { <b>// Proměná (počáteční hodnota); podmínka; příkaz (++ nebo --)</b>
+          document.write("Knock&lt;br /&gt;"); <b>//3x"Knock"</b>
+      }                
         </code>
-        <h3>while cyklus – true(pravda), false(nepravda)</h3>
+      </pre>
+
+      <h3>Cyklus může být v cyklu</h3>
+
+      <pre>
         <code>
-        let i = 1; //proměná
-        while (i &lt;= 10) { //podmínka
-          i++; //příkaz
-          document.write("Knock&lt;br /&gt;"); //10x "knock"
-        }  
+      document.write("&lt;table&gt;");
+        for (let j = 1; j &lt;= 10; j++) {
+          document.write("&lt;tr&gt;");
+          for (let i = 1; i &lt;= 10; i++)
+            document.write("&lt;td&gt;" + i * j + "&lt;/td&gt;");
+          document.write("&lt;/tr&gt;");
+        }
+        document.write("&lt;/table&gt;");    
         </code>
-        <h3>do...while – vždy se vykoná aspoň jednou</h3>
+      </pre>
+
+      <h4>Výsledek</h4>
+
+      <script>
+          document.write("<table>");
+        for (let j = 1; j <= 10; j++) {
+          document.write("<tr>");
+          for (let i = 1; i <= 10; i++)
+            document.write("<td>" + i * j + "</td>");
+          document.write("</tr>");
+        }
+        document.write("</table>");        
+      </script>
+
+      <h3>while cyklus – true(pravda), false(nepravda)</h3>
+
+      <pre>
+        <code>
+      let i = 1; <b>// Proměnná</b>
+      while (i &lt;= 10) { <b>// Podmínka</b>
+        i++; <b>// Příkaz</b>
+        document.write("Knock&lt;br /&gt;"); <b>// 10x "knock"</b>
+      }  
+        </code>
+      </pre>  
+
+      <h3>do...while – vždy se vykoná aspoň jednou</h3>
+      <pre>
         <code>
         let a, b, c; // proměnné
         do {
@@ -821,7 +872,9 @@
     <!-- Pole -->
     <article>
       <h2>Pole</h2>
+
       <h3>Číselně indexované pole</h3>
+
       <table>
         <tr>
           <th>Idex:</th>
@@ -848,99 +901,123 @@
           <td>lol</td>
         </tr>
       </table>
+
+      <h3>Vytvoření pole:</h3>
+
       <pre>
-        <h3>Vytvoření pole:</h3>
         <code>
-        let promnenna = new Array(); 
-        // nebo
-        let promnenna = [];          
-        </code>
-        <h3>Naplnění pole:</h3>
-        <code>
-        promnenna[0] = "Ahoj"; // "Ahoj" 
-        </code>
-        <h3>Naplnění pole pomocí ciklu:</h3>
-        <code>
-        for (let i = 0; i &lt; 10; i++) {
-          promnenna[i] = i + 1;
-        }
-        document.write(promnenna); // "1,2,3,4,5,6,7,8,9,10"              
-        </code>
-        <h3>výpis pole pomocí ciklu:</h3>
-        <code>
-        for (let i = 0; i &lt; promnenna.length; i++) {
-          document.write(promnenna[i] + " ");
-        }
-        </code>
-        <h3>for...of – zjednodušení výraz</h3>
-        <code>
-        for (let promnenna2 of promnenna) {
-          document.write(promnenna2);
-        } // "12345678910"              
-        </code>
-        <h3>Výpis indexů polí:</h3>
-        <code>
-        for (let promnenna2 in promnenna) {
-          document.write(promnenna2);
-        } // "0123456789" čísla indexu  
+      let nazevPole = new Array(); 
+      <b>// nebo</b>
+      let nazevPole = [];          
         </code>
       </pre>
+
+      <h3>Naplnění pole:</h3>
+
+      <pre>
+        <code>
+      nazevPole[0] = "Ahoj"; <b>// "Ahoj"</b> 
+        </code>
+      </pre>  
+
+      <h3>Naplnění pole pomocí ciklu:</h3>
+
+      <pre>
+        <code>
+      for (let i = 0; i &lt; 10; i++) {
+        nazevPole[i] = i + 1;
+      }
+      document.write(nazevPole); <b>// "1,2,3,4,5,6,7,8,9,10"</b>              
+        </code>
+      </pre>
+
+      <h3>výpis pole pomocí ciklu:</h3>
+
+      <pre>
+        <code>
+      for (let i = 0; i &lt; nazevPole.length; i++) {
+        document.write(nazevPole[i] + " ");
+      }
+        </code>
+      </pre>
+
+      <h3>for...of – zjednodušení výraz</h3>
+      <pre>
+        <code>
+      for (let nazevPole1 of nazevPole) {
+        document.write(nazevPole1);
+      } <b>// "12345678910"</b>              
+        </code>
+      </pre>
+
+      <h3>Výpis indexů polí:</h3>
+      
+      <pre>
+        <code>
+      for (let nazevPole1 in nazevPole) {
+        document.write(nazevPole1);
+      } <b>// "0123456789" čísla indexu</b>  
+        </code>
+      </pre>
+
       <h3>Fungce (method) polí:</h3>
-      <table>
-        <thead>
-          <th>Methoda</th>
-          <th>Popis</th>
-          <th>Výsledek</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>promnenna.push("lol");</code></td>
-            <td>přidá nový prvek na konec pole</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td><code>promnenna.unshift("Ahoj");</code></td>
-            <td>přidá nový prvek na začátek pole</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td><code>promnenna.splice(2, 3);</code></td>
-            <td>smaže 3 prvky od 3. prvku dále</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td><code>promnenna.sort();</code></td>
-            <td>seřadí "textové řetězce" podle abecedy</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td><code>promnenna.reverse();</code></td>
-            <td>otočí pole tak, aby byly prvky pozpátku</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td><code>promnenna.length</code></td>
-            <td>délka pole</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td><code></code></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td><code></code></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
+
+      <pre>
+        <code>
+      nazevPole[3]; 
+      <b>// Přístu k poli s č. indexem 3 "Mongol"</b>
+        </code>
+      </pre>
+
+      <pre>
+        <code>
+      nazevPole.push("lol");
+      <b>// Přidá nový prvek na konec pole</b>
+        </code>
+      </pre>
+
+      <pre>
+        <code>
+      nazevPole.unshift("Ahoj");
+      <b>// Přidá nový prvek na začátek pole</b>    
+        </code>
+      </pre>
+
+      <pre>
+        <code>
+      nazevPole.splice(2, 3);
+      <b>// Smaže 3 prvky od 2. prvku dále</b>
+        </code>
+      </pre>
+
+      <pre>
+        <code>
+      nazevPole.sort();
+      <b>// Seřadí "textové řetězce" podle abecedy</b>
+        </code>
+      </pre>
+
+      <pre>
+        <code>
+      nazevPole.reverse();
+      <b>// Otočí pole tak, aby byly prvky pozpátku.</b>    
+        </code>
+      </pre>
+
+      <pre>
+        <code>
+      nazevPole.length;
+      <b>// Délka pole</b>
+        </code>
+      </pre>
     </article>
     <!-- Function  -->
     <article>
       <h2>Function (Funkce)</h2>
+
       <p><mark>Funkce</mark> Jedná se o blok kódu, který jednou napíšeme a potom ho můžeme libovolně volat bez toho,
         abychom ho psali znovu a opakovali se.</p>
+
       <pre>
         <code>
         function nazevFungce() {
@@ -948,35 +1025,74 @@
         }                  
         </code>
         <code>
-        nazevFungce(); // zavolání funkce
+        nazevFungce(); <b>// Zavolání funkce</b>
         </code>
       </pre>
 
       <h3>Funkce s parametry:</h3>
+
       <p>Funkce může mít také libovolný počet vstupních parametrů, které píšeme do závorky v její definici a podle nich
         ovlivňujeme její chování.
-        Pokud nemá parametr nějakou hodnotu tak je: <mark>undefined</mark></p>
+        Pokud nemá parametr nějakou hodnotu tak je: <mark>undefined</mark>.</p>
+
       <pre>
         <code>
       function nazevFungce(nazevParametru) {
-        document.write("Ahoj " + nazevParametru + "!<br />");
+        document.write("Ahoj " + nazevParametru + "!");
       }
-      nazevFungce("Karle"); // Ahoj Karle!(nazevParametru = "Karle")
-      nazevFungce("Davide"); // Ahoj Davide! (nazevParametru = "Davide")
-      nazevFungce("Mařenko"); // Ahoj Mařenko! (nazevParametru = "Mařenko")      
+      nazevFungce("Karle"); <b>// Ahoj Karle!(nazevParametru = "Karle")</b>
+      nazevFungce("Davide"); <b>// Ahoj Davide! (nazevParametru = "Davide")</b>
+      nazevFungce("Mařenko"); <b>// Ahoj Mařenko! (nazevParametru = "Mařenko")</b>      
         </code>
       </pre>
+
       <h3>Návratová hodnota funkce:</h3>
+
       <p>Funkce může dále vracet nějakou hodnotu. V našem případě bychom nemuseli do dokumentu rovnou zapisovat
         (například proto, že budeme chtít s textem ještě dále pracovat a ne ho rovnou vypsat). Slouží k tomu
-        příkaz return</p>
+        příkaz return.</p>
+      <p>Funkci můžem uložit do promměné.</p>
+
       <pre>
         <code>
       function nazevFungce(nazevParametru) {
         return "Ahoj, vřele tě tu vítám " + nazevParametru + "!";
       }
-      let promnenna = nazevFungce("Karle"); // (nazevParametru = "Karle")
-      document.write(promnenna); // Ahoj, vřele tě tu vítám Karle!    
+      let promnenna = nazevFungce("Karle"); <b>// (nazevParametru = "Karle")</b>
+      document.write(promnenna); <b>// Ahoj, vřele tě tu vítám Karle!</b>    
+        </code>
+      </pre>
+
+      <h3>Anonymní funkce</h3>
+
+      <p>Funkci můžeme definovat přímo v přiřazení do proměnné, hovoříme potom o tzv. anonymní funkci:</p>
+
+      <pre>
+        <code>
+      let promenna = function(jmeno) {
+        return "Ahoj, vřele tě tu vítám " + jmeno + "!";
+      }
+        
+      let text = promenna("Karle");
+      document.write(text);    
+        </code>
+      </pre>
+
+      <h3>callback </h3>
+
+      <pre>
+        <code>
+      let promenna_s_funkci = function(jmeno) {
+        document.write("Ahoj, vřele tě tu vítám " + jmeno + "!");
+      }
+        
+      function zavolej_funkci(funkce, jmeno) {
+        document.write("Jsem funkce a volám funkci, která mi přišla do parametru v proměnné.&lt;br /&gt;");
+        document.write("Jako parametr jí dám jmeno, které mi přišlo jako 2. parametr.&lt;br /&gt;");
+        funkce(jmeno);
+      }
+        
+      zavolej_funkci(promenna_s_funkci, "Karle");    
         </code>
       </pre>
     </article>
