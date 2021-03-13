@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS.css">
+    <title>Šachovnice</title>
+</head>
+
+<body>
+
+    <h1>Šachovnice</h1>
+
+    <script>
+        document.write('<table>');
+        for (let i = 0; i < 8; i++) {
+            document.write('<tr>');
+            if (i % 2 == 0) {
+                for (let y = 0; y < 4; y++) {
+                    document.write('<td class="Cerna"></td>');
+                    document.write('<td class="Bila"></td>');
+                }
+            }
+            else {
+                for (let x = 0; x < 4; x++) {
+                    document.write('<td class="Bila"></td>');
+                    document.write('<td class="Cerna"></td>');
+                }
+            }
+            document.write('</tr>')
+        }
+        document.write('</table>');
+    </script>
+</body>
+
+</html>

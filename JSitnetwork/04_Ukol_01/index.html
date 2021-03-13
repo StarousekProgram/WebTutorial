@@ -4,36 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Smajlíky</title>
 </head>
 <body>
     <h1>Smajlíky</h1>
+
     <h2>IF else</h2>
+
     <script>
         let smajlik = prompt();
         let malySmajlik = smajlik.toLowerCase() // Na malý písmena
         let cistySmajlik = malySmajlik.trim(); //odtranění bílích znaků
         document.write(cistySmajlik);
+
         let smajlikStastny = ":-)";
         let smajlikSmutny = ":-(";
         let smajlikHvezdicka = ":-*";
         let smajlikP = ":-P";
-        if (smajlik === smajlikStastny) {
+
+        if (cistySmajlik === smajlikStastny) {
             document.write(smajlikStastny);
-        } else if (smajlik === smajlikSmutny) {
+        } else if (cistySmajlik === smajlikSmutny) {
             document.write(smajlikSmutny);
-        } else if (smajlik === smajlikHvezdicka) {
+        } else if (cistySmajlik === smajlikHvezdicka) {
             document.write(smajlikHvezdicka);
-        } else if (smajlik === smajlikP) {
+        } else if (cistySmajlik === smajlikP) {
             document.write(smajlikP);
         } else  {
             document.write("Nesprávní smajlík");
         } 
     </script>
+
     <h2>SWITCH</h2>
+
     <script>
         let vysledek;
-        switch (smajlik) {
+        switch (cistySmajlik) {
             case smajlikStastny:
                 vysledek = smajlikStastny;
                 break;

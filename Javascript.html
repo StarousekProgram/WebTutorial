@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="/CSS/styl.css">
+  <script src=""></script>
   <title>Javascript</title>
 </head>
 
@@ -40,79 +41,336 @@
   <section>
     <!-- Javascript info -->
     <article>
+
       <h1>Javascript (JS)</h1>
 
       <p>JavaScript a Java jsou zcela odlišné jazyky, a to jak v koncepci, tak v designu.</p>
       <p>JavaScript vynalezl Brendan Eich v roce 1995 a v roce 1997 se stal standardem ECMA.</p>
       <p>ECMA-262 je oficiální název normy. ECMAScript je oficiální název jazyka.</p>
+
     </article>
     <!-- Komentář -->
     <article>
+
       <h2>Komentáře</h2>
 
       <pre>
           <code>
-     <b>// komentář na jeden řádek</b>
-     <b>/* komentář na více řádků */</b>
+    <b>// komentář na jeden řádek</b>
+    <b>/* komentář na více řádků */</b>
           </code>
         </pre>
+
     </article>
     <!-- Jak přidat JS -->
     <article>
+
       <h2>Jak přidat JS</h2>
+      <!-- Inline JS -->
+      <article>
 
-      <h3>Inline JS</h3>
+        <h3>Inline JS</h3>
 
-      <p>Píšem přímo do body Elementu.</p>
+        <p>Píšem přímo do body Elementu.</p>
 
-      <pre>
-        <code>
-      &lt;script&gt; JS kód &lt;/script&gt;
-        </code>
-      </pre>
+        <pre>
+          <code>
+    &lt;script&gt; JS kód &lt;/script&gt;
+          </code>
+        </pre>
+
+      </article>
+      <!-- Externí JS -->
+      <article>
+
+        <h3>Externí JS</h3>
+
+        <ol>
+          <li>Vytvoříme složku JS a v něm soubor JS.js</li>
+          <li>V HTML souboru napojíme JS soubor:</li>
+        </ol>
+
+        <pre>
+          <code>
+    &lt;script src=""&gt;&lt;/script&gt;
+          </code>
+        </pre>
+
+      </article>
     </article>
     <!-- Výstupy v JS -->
     <article>
+
       <h2>Výstupy JS</h2>
-      <table>
-        <thead>
-          <tr>
-            <th></th>
-            <th>Popis</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>innerHTML</code></td>
-            <td>Zápis do HTML Elementu</td>
-          </tr>
-          <tr>
-            <td><code>document.write()</code></td>
-            <td>Zápis do HTML výstupu</td>
-          </tr>
-          <tr>
-            <td><code>window.alert()</code></td>
-            <td>Zápis do výstražného pole</td>
-          </tr>
-          <tr>
-            <td><code>console.log()</code></td>
-            <td>Zápis do konzoly prohlížeče</td>
-          </tr>
-          <tr>
-            <td><code>window.print()</code></td>
-            <td>Vytiskne aktuální stránku</td>
-          </tr>
-        </tbody>
-      </table>
+
+      <pre>
+        <code>
+      document.write("text");
+      <b>// Zápis do HTML výstupu</b>
+        </code>
+      </pre>
+
+      <pre>
+        <code>
+      document.getElementById("ID Elementu").innerHTML = "text";
+      <b>// Zápis do HTML elementu podle ID.</b>
+        </code>
+      </pre>
+
+      <pre>
+        <code>
+      console.log("text")
+      <b>// Zápis do konzoly prohlížeče</b>
+        </code>
+      </pre>
+
+      <pre>
+        <code>
+      window.alert("text");
+      <b>// Zápis do výstražného pole</b>
+        </code>
+      </pre>
+
+      <pre>
+        <code>
+      window.print();
+      <b>// Vytiskne aktuální stránku</b>
+        </code>
+      </pre>
+
     </article>
+    <!-- Vstupy JS -->
     <article>
+
       <h2>Vstupy JS</h2>
-    <pre>
-      <code>
-    <b>// Vyskakovací okénko s formulářem</b>
-    promnenna = prompt("Text co uvidí uživatel");    
-      </code>
-    </pre>
+
+      <pre>
+        <code>
+      <b>// Vyskakovací okénko s formulářem</b>
+      promnenna = prompt("Text co uvidí uživatel");    
+        </code>
+      </pre>
+
+    </article>
+    <!-- DOM -->
+    <article>
+      <!-- info DOM -->
+      <article>
+        <h2>DOM (Document Object Model)</h2>
+
+        <p>Element = objekt (document)</p>
+      </article>
+      <!-- Výběr elementů -->
+      <article>
+
+        <h3>Výběr elementů</h3>
+
+        <p>Pokud nenajde tak vrátí prázdnou HTMLCollection.</p>
+
+        <pre>
+          <code>
+      document.getElementById(id HTML Elementu);
+      <b>// Vyberem HTML element podle ID</b>
+          </code>
+        </pre>
+
+        <pre>
+          <code>
+      document.getElementsByClassName("class HTML Elementu");
+      <b>// Vyberem HTML elementy podle CLASS</b>
+          </code>
+        </pre>
+
+        <pre>
+          <code>
+      document.getElementsByTagName("HTML element");
+      <b>// Vybereme HTML elementy</b>
+          </code>
+        </pre>
+
+        <pre>
+          <code>
+      document.getElementsByTagNameNS();
+          </code>
+        </pre>
+
+        <pre>
+          <code>
+      document.getElementsByName();
+          </code>
+        </pre>
+
+        <pre>
+          <code>
+      document.querySelector("input[type=text].class#id");
+      <b>// První Element input, s atributem type=text, třídou class a id. </b>
+          </code>
+        </pre>
+
+        <pre>
+          <code>
+      document.querySelectorAll("div[data-countdown]");
+      <b>// Všechny elementy s atributem data-countdown</b>
+          </code>
+        </pre>
+
+      </article>
+      <!-- Editace obsahu -->
+      <article>
+
+        <h3>Editace obsahu</h3>
+
+        <pre>
+          <code>
+    innerHTML
+    <b>// Zápis do HTML Elementu</b>	        
+          </code>
+        </pre>
+
+        <pre>
+          <code>
+    innerText
+    <b>// Text HTML Elementu</b>
+          </code>
+        </pre>
+
+        <pre>
+          <code>
+    textContent
+    <b>// Text skrytý před CSS</b>        
+          </code>
+        </pre>
+      </article>
+      <!-- Editace atributů -->
+      <article>
+
+        <h3>Editace atributů</h3>
+
+        <pre>
+          <code>
+      hasAttribute()
+      <b>// Má atribut?</b>
+          </code>
+        </pre>
+
+        <pre>
+          <code>
+      hasAttributes()
+      <b>// Má atributy?</b>
+          </code>
+        </pre>
+
+        <pre>
+          <code>
+      firstChild
+      <b>// První potomek</b>
+          </code>
+        </pre>
+
+        <pre>
+          <code>
+      lastChild
+      <b>// Poslední potomek</b>      
+          </code>
+        </pre>
+
+        <pre>
+          <code>
+      firstElementChild      
+          </code>
+        </pre>
+
+        <pre>
+          <code>
+      lastElementChild     
+          </code>
+        </pre>
+
+      </article>
+      <!-- Tvorba elementů -->
+      <article>
+
+        <h3>Tvorba elementů</h3>
+
+        <pre>
+          <code>
+    createElement()        
+          </code>
+        </pre>
+
+        <pre>
+          <code>
+    createElementNS()
+          </code>
+        </pre>
+
+      </article>
+      <!-- Vkládání a přesouvání elementů -->
+      <article>
+
+        <h3>Vkládání a přesouvání elementů</h3>
+
+        <pre>
+          <code>
+      appendChild()
+      <b>// Přesunutí a vložení</b>      
+          </code>
+        </pre>
+
+        <pre>
+          <code>
+      insertBefore() 
+      <b>// Přesunutí a vložení</b>     
+          </code>
+        </pre>
+
+        <pre>
+          <code>
+      replaceChild()
+      <b>// Nahrazení potomka elementu</b>      
+          </code>
+        </pre>
+
+        <pre>
+          <code>
+      removeChild()
+      <b>// Odstraní potomka</b>
+          </code>
+        </pre>
+      </article>
+      <!-- Rodiče -->
+      <article>
+        
+        <h3>Rodič elementu</h3>
+
+        <pre>
+          <code>
+      parentElement
+      <b>// Rodič Elementu</b>    
+          </code>
+        </pre>
+
+        <pre>
+          <code>
+      parentNode
+          </code>
+        </pre>
+      </article>
+      <!-- Události -->
+      <article>
+
+        <h3>Události</h3>
+
+        <pre>
+          <code>
+      <b>// Hodnotu tl uložíme do proměnné HTML: &lt;button id="tlacitko">Sečti!&lt;/button></b>
+      let TL = document.getElementById("tlacitko");
+      <b>// Zavolání funkce</b> 
+      TL.onclick = funkce;
+          </code>
+        </pre>
+
+      </article>
     </article>
     <!-- Proměnné -->
     <article>
@@ -202,6 +460,16 @@
           </tr>
         </tbody>
       </table>
+
+      <h3>Vlastnosti</h3>
+
+      <pre>
+        <code>
+      nazevPromenne.value
+      nazevKonstanty.value
+      <b>// Přístup k hodnotě uložené v proměnné</b>    
+        </code>
+      </pre>
 
     </article>
     <!-- Datum a čas -->
@@ -754,7 +1022,7 @@
       </pre>
 
       <h3>Ternární operátor</h3>
-      <pre>  
+      <pre>
         <code>
       let muz = true; <b>// Boolean proměnná</b>
       let nazevPohlavi = (muz) ? 'muž' : 'žena'; <b>//(Logixký výraz) ? true : false;</b>
@@ -833,14 +1101,14 @@
       <h4>Výsledek</h4>
 
       <script>
-          document.write("<table>");
+        document.write("<table>");
         for (let j = 1; j <= 10; j++) {
           document.write("<tr>");
           for (let i = 1; i <= 10; i++)
             document.write("<td>" + i * j + "</td>");
           document.write("</tr>");
         }
-        document.write("</table>");        
+        document.write("</table>");
       </script>
 
       <h3>while cyklus – true(pravda), false(nepravda)</h3>
@@ -853,7 +1121,7 @@
         document.write("Knock&lt;br /&gt;"); <b>// 10x "knock"</b>
       }  
         </code>
-      </pre>  
+      </pre>
 
       <h3>do...while – vždy se vykoná aspoň jednou</h3>
       <pre>
@@ -918,7 +1186,7 @@
         <code>
       nazevPole[0] = "Ahoj"; <b>// "Ahoj"</b> 
         </code>
-      </pre>  
+      </pre>
 
       <h3>Naplnění pole pomocí ciklu:</h3>
 
@@ -951,7 +1219,7 @@
       </pre>
 
       <h3>Výpis indexů polí:</h3>
-      
+
       <pre>
         <code>
       for (let nazevPole1 in nazevPole) {
@@ -1093,6 +1361,17 @@
       }
         
       zavolej_funkci(promenna_s_funkci, "Karle");    
+        </code>
+      </pre>
+
+      <h3>onload</h3>
+
+      <p>Načte funkci až je načtená celá HTML stránka.</p>
+
+      <pre>
+        <code>
+      window.onload = function() {
+      }    
         </code>
       </pre>
     </article>
